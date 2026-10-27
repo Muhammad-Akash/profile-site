@@ -731,13 +731,14 @@ button {
 /* =========================================================
    reveal
    ========================================================= */
-.reveal {
+/* Without JS the content must be visible — .reveal only hides when JS is live. */
+.js .reveal {
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
 }
 
-.reveal.is-in {
+.js .reveal.is-in {
   opacity: 1;
   transform: none;
 }
@@ -769,4 +770,5 @@ button {
     transition-duration: 0.001ms !important;
   }
   .reveal { opacity: 1; transform: none; }
+  .js .reveal { opacity: 1; transform: none; }
 }
