@@ -667,7 +667,8 @@ button {
 }
 
 .contact-mail {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: flex-start;
   gap: 12px;
   margin-top: 26px;
@@ -697,7 +698,8 @@ button {
 .contact-mail:hover svg { transform: translate(4px, -4px); }
 
 .contact-phone {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: center;
   gap: 12px;
   margin-top: 22px;
