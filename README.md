@@ -34,15 +34,20 @@ Find `.projects` in `index.html`. Each card is one block:
 </article>
 ```
 
-Cards flow into a responsive grid — three columns on wide screens, one on phones.
-The `project-platform` label is free text: `Android`, `Web`, `Desktop`, `Game`, `AI`,
-`Browser`, `Tools`.
+Cards flow into a responsive grid: three columns on wide screens, one on phones.
+The `project-platform` label is free text — `Android`, `Web`, `Desktop`, `Game`,
+`AI`, `Browser`, `Tools`.
 
 To make a project clickable, wrap the title:
 
 ```html
 <h3 class="project-title"><a href="https://…">Project Name</a></h3>
 ```
+
+### Contact
+
+Email and WhatsApp are live in the Contact section. Both appear twice — once as
+the big link and once in the socials row — so a change means editing both.
 
 ### Colors
 
@@ -51,9 +56,8 @@ Change `--accent` and the whole site follows.
 
 ### Still placeholder
 
-- `you@example.com` — email in the Contact section and its `mailto:`
-- Socials list — only GitHub is wired up
 - `og.png` — regenerate if the name or headline changes
+- Project cards have no links yet
 
 ## Local preview
 
@@ -71,5 +75,5 @@ git commit -m "update"
 git push
 ```
 
-Pages rebuilds in ~40 seconds. Custom domain later: add a `CNAME` file with the
-bare domain and point a `CNAME` DNS record at `muhammad-akash.github.io`.
+Pages rebuilds in about 40 seconds. Custom domain later: add a `CNAME` file with
+the bare domain and point a `CNAME` DNS record at `muhammad-akash.github.io`.
