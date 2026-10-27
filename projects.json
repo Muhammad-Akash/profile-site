@@ -1,0 +1,396 @@
+{
+  "updated": "2026-10",
+  "projects": [
+    {
+      "slug": "chorus",
+      "name": "Chorus",
+      "platform": "AI",
+      "year": "2026",
+      "status": "Unreleased",
+      "summary": "Pools RAM and VRAM across machines on a LAN to run one large model.",
+      "tags": ["Tauri", "React", "Rust"],
+      "stack": ["Tauri v2", "React 19", "Rust", "llama.cpp", "GGUF"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "Most machines can't fit a large model on their own. Chorus lets several Windows machines on the same network share the load, so the model runs across the pool instead of on one box. Each node contributes the memory and compute it can spare; the app handles discovery, distribution, and keeping the nodes in step."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "The hard part isn't inference — it's coordination. Nodes join and leave, links are slower than local memory, and the whole thing has to degrade instead of failing. The UI is a Tauri shell over a React front end, with the scheduling and networking in Rust."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "ai-imam",
+      "name": "Ai Imam",
+      "platform": "Android",
+      "year": "2026",
+      "status": "In development",
+      "summary": "Islamic AI assistant — Android client over a Python backend.",
+      "tags": ["Android", "Python", "AI"],
+      "stack": ["Kotlin", "Android", "Python", "LLM API"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "An assistant for Islamic questions and daily practice, packaged as a native Android app. The app is a thin, fast client; the reasoning and retrieval live in a Python backend that can be updated without shipping a new build."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Splitting the app from the model means the answers can improve weekly while the install stays stable. The work was mostly in keeping the two in sync and making the app feel instant while the backend thinks."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "loadshedding-alert",
+      "name": "LoadShedding Alert",
+      "platform": "Web",
+      "year": "2026",
+      "status": "In development",
+      "summary": "Local-first power-cut pre-alerts, built for Bangladesh.",
+      "tags": ["FastAPI", "Python", "Docker"],
+      "stack": ["FastAPI", "Python", "Docker", "Postgres"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "Warns people before the power goes, not after. A FastAPI backend keeps the schedules and pushes alerts to subscribers, with the whole stack containerised so it can run on cheap hardware."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "The data is messy and changes constantly, and the network is exactly what you don't have when the power cuts. Design decisions leaned local-first: cache what you can, alert early, and don't block on a perfect connection."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "automated-chatbot",
+      "name": "Automated Chatbot",
+      "platform": "AI",
+      "year": "2026",
+      "status": "Running",
+      "summary": "Custom AI chatbot answering on Messenger and WhatsApp.",
+      "tags": ["Python", "AI", "Bots"],
+      "stack": ["Python", "Messenger API", "WhatsApp API", "LLM API"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "A single bot that answers on both Messenger and WhatsApp, with an admin channel for commands and adjustments. Runs on a small always-on machine rather than paying for hosting."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Two messaging platforms, two very different sets of rules about what you can send and how fast. The interesting work is the conversation state and the queueing, not the model."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "my-masjid-azan",
+      "name": "My Masjid Azan",
+      "platform": "Android",
+      "year": "2026",
+      "status": "In development",
+      "summary": "Prayer times with a home-screen widget that resizes to any size.",
+      "tags": ["Android", "Widget", "Kotlin"],
+      "stack": ["Kotlin", "Android", "App Widgets", "WorkManager"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "Shows the next prayer and the day's times, with a widget that fits whatever space the home screen gives it — from a single line to a full block."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Android widgets resize continuously and the system gives you very little to work with. Getting the layout smooth at every size meant treating the widget as a small layout engine rather than a fixed view."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "pc-controller",
+      "name": "PC Controller",
+      "platform": "Desktop",
+      "year": "2025",
+      "status": "Shipped",
+      "summary": "Drive a desktop from a phone — Python server, Android client.",
+      "tags": ["Python", "Android", "LAN"],
+      "stack": ["Python", "CustomTkinter", "Android", "WebSocket"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "A small server on the PC and an app on the phone: volume, media, shutdown, and the everyday controls you'd otherwise walk across the room for. Both packaged as standalone builds — an .exe and an .apk."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Pairing has to work without configuration on a network you don't control. Discovery, reconnect, and a UI that stays usable when the link drops were most of the work."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "youtube-fastforward",
+      "name": "YouTube FastForward",
+      "platform": "Browser",
+      "year": "2026",
+      "status": "Shipped",
+      "summary": "Playback speed plus measurement-driven volume levelling.",
+      "tags": ["Chrome", "JavaScript", "Extension"],
+      "stack": ["Manifest V3", "JavaScript", "Web Audio", "dBFS AGC"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "Keyboard-driven playback speed, and a leveller that reads the actual loudness of the audio and normalises it, so quiet videos and loud ads end up at the same volume."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Volume levelling by measurement rather than guesswork: a rolling dBFS reading feeds an automatic gain control. Most of the bug history came from edge cases — the first Short, the stalled measurement window, the watchdog that killed the leveller after a track change."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "tuee",
+      "name": "Tuee",
+      "platform": "Android",
+      "year": "2026",
+      "status": "In development",
+      "summary": "Home-cooked meals — native Android app.",
+      "tags": ["Android", "Kotlin", "Native"],
+      "stack": ["Kotlin", "Android", "Jetpack"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "Connects people who cook at home with people who want to eat it. Browsing, ordering, and the usual marketplace flow, built as a native Android app."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Started as a web build, later rebuilt natively for the feel and the platform integration. Carrying the design language across that change without losing the details was the real exercise."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "portable-ai-assistant",
+      "name": "Portable AI Assistant",
+      "platform": "Android",
+      "year": "2025",
+      "status": "Shipped",
+      "summary": "Pocket assistant wired to a hosted LLM API.",
+      "tags": ["Android", "Python", "API"],
+      "stack": ["Kotlin", "Android", "Python", "Groq API"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "An assistant that lives on the phone but does its thinking through a fast hosted model API, with a small Python layer for the parts that don't belong in the client."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Keeping latency low on mobile means streaming responses and never blocking the interface. Most of the tuning was in how much context gets sent and when."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "no-ads-qibla-compass",
+      "name": "No Ads Qibla Compass",
+      "platform": "Android",
+      "year": "2025",
+      "status": "Shipped",
+      "summary": "Qibla direction from GPS and sensors, no advertising.",
+      "tags": ["Android", "Kotlin", "Sensors"],
+      "stack": ["Kotlin", "Android", "Location", "Magnetometer"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "Finds the direction of the Kaaba using position and the device's sensors, and points at it. No ads, no accounts, no tracking."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Compasses drift and phones lie about their sensors. The work was in calibration and in being honest when accuracy is poor instead of confidently pointing the wrong way."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "calling-bell-app",
+      "name": "Calling Bell App",
+      "platform": "Android",
+      "year": "2025",
+      "status": "Shipped",
+      "summary": "Two phones on one Wi-Fi act as doorbell and receiver.",
+      "tags": ["Android", "Kotlin", "LAN"],
+      "stack": ["Kotlin", "Android", "Local network"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "One phone sits by the door, one lives with you. Press the bell and the receiver rings wherever it is on the network — no cloud, no subscription."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Local discovery between two devices with no server in the middle, and staying paired after both have been asleep."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "shortloop",
+      "name": "ShortLoop",
+      "platform": "Tools",
+      "year": "2026",
+      "status": "In development",
+      "summary": "Pipeline for producing short-form video, end to end.",
+      "tags": ["Python", "Automation", "API"],
+      "stack": ["Python", "FFmpeg", "API"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "Takes an idea or a source clip and carries it through to a finished short — script, cut, captions, upload — with as little manual handling as possible."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Automation that runs unattended has to survive interruptions and resume cleanly. Most of the design is state and recovery, not the creative step."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "wattscope",
+      "name": "WattScope",
+      "platform": "Desktop",
+      "year": "2025",
+      "status": "Shipped",
+      "summary": "Power-supply wattage calculator for PC builds.",
+      "tags": ["C#", ".NET", "Desktop"],
+      "stack": ["C#", ".NET", "WPF"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "Add up the parts of a build and get an honest recommendation for how much power supply it needs, with headroom rather than a marketing number."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "A small tool where the value is entirely in the numbers being right and the interface staying out of the way."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "volume-control-pro",
+      "name": "Volume Control Pro",
+      "platform": "Android",
+      "year": "2025",
+      "status": "Shipped",
+      "summary": "Fine-grained volume control the stock panel never gave you.",
+      "tags": ["Android", "Kotlin", "Audio"],
+      "stack": ["Kotlin", "Android", "AudioManager"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "More steps, per-stream control, and the adjustments Android's default panel hides behind three taps."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Android's audio streams are separate and each has its own rules. Presenting them together without confusing anyone was the whole design problem."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "neon-breaker",
+      "name": "Neon Breaker",
+      "platform": "Game",
+      "year": "2025",
+      "status": "Playable",
+      "summary": "Offline brick breaker — one level, three lives, no install.",
+      "tags": ["JavaScript", "Canvas", "Game"],
+      "stack": ["JavaScript", "Canvas 2D", "HTML"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "A DX Ball-style brick breaker in a single page. Open the file, the game runs — no server, no network, no downloaded assets."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Built to be one level that feels finished: fixed collision, readable feedback, and a difficulty curve that's tight rather than long."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "dx-ball-antigravity",
+      "name": "DX Ball Antigravity",
+      "platform": "Game",
+      "year": "2025",
+      "status": "Playable",
+      "summary": "DX Ball variant with dynamic ball-speed scaling.",
+      "tags": ["JavaScript", "Canvas", "Game"],
+      "stack": ["JavaScript", "Canvas 2D", "HTML"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "A fast-completion take on DX Ball: one level, and the ball speeds up as the grid empties, so the last bricks are the hardest."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Scaling speed dynamically changes how the game feels more than any amount of level design. Tuning it so it stays fair is the whole trick."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "flappy-bird",
+      "name": "Flappy Bird",
+      "platform": "Game",
+      "year": "2024",
+      "status": "Playable",
+      "summary": "Clone in a single HTML file, open and play.",
+      "tags": ["HTML", "Canvas", "Game"],
+      "stack": ["HTML", "Canvas 2D", "JavaScript"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "The classic, rebuilt as a single file. One tap, one obstacle pattern, one score that you keep trying to beat."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "The game is small enough to hold in your head entirely, which makes it a good way to keep your hands on the fundamentals."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    }
+  ]
+}

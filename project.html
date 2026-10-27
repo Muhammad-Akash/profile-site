@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project — Muhammad Akash</title>
+<meta name="description" content="Project showcase." />
+<meta name="theme-color" content="#0a0a0b" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Project — Muhammad Akash" />
+<meta property="og:description" content="Project showcase." />
+<meta property="og:url" content="https://muhammad-akash.github.io/profile-site/" />
+<meta property="og:image" content="https://muhammad-akash.github.io/profile-site/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://muhammad-akash.github.io/profile-site/og.png" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0a0b'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='700' text-anchor='middle' fill='%23c8ff4d'>M</text></svg>" />
+<link rel="stylesheet" href="styles.css" />
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="Home">
+      <span class="brand-mark">M</span>
+      <span class="brand-text">muhammad<span class="dim">akash</span></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#work" class="is-active">Work</a>
+      <a href="index.html#stack">Stack</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle color theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.2v2.6M12 19.2v2.6M2.2 12h2.6M19.2 12h2.6M5.1 5.1l1.9 1.9M17 17l1.9 1.9M18.9 5.1L17 7M7 17l-1.9 1.9"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="showcase">
+  <div class="container">
+
+    <a class="back-link" href="index.html#work">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H6M12 5l-7 7 7 7"/></svg>
+      All work
+    </a>
+
+    <p class="showcase-note" id="showcase-note" hidden>
+      That project doesn't exist. <a href="index.html#work">Back to the list</a>.
+    </p>
+
+    <article class="showcase-body" id="showcase-body" hidden>
+
+      <header class="showcase-head">
+        <div class="showcase-kicker mono">
+          <span id="p-index">001</span>
+          <span class="sep">/</span>
+          <span id="p-platform">Android</span>
+          <span class="sep">/</span>
+          <span id="p-year">2026</span>
+        </div>
+
+        <h1 class="showcase-title" id="p-title">Project</h1>
+        <p class="showcase-summary" id="p-summary"></p>
+
+        <ul class="tags" id="p-tags"></ul>
+      </header>
+
+      <figure class="showcase-cover" id="p-cover"></figure>
+
+      <div class="showcase-grid">
+        <div class="showcase-main" id="p-body"></div>
+
+        <aside class="showcase-aside">
+          <div class="spec">
+            <h2 class="spec-title mono">Details</h2>
+            <dl>
+              <div><dt>Status</dt><dd id="p-status">—</dd></div>
+              <div><dt>Platform</dt><dd id="p-platform2">—</dd></div>
+              <div><dt>Year</dt><dd id="p-year2">—</dd></div>
+            </dl>
+          </div>
+
+          <div class="spec">
+            <h2 class="spec-title mono">Built with</h2>
+            <ul class="spec-stack" id="p-stack"></ul>
+          </div>
+
+          <div class="spec" id="p-links-wrap" hidden>
+            <h2 class="spec-title mono">Links</h2>
+            <ul class="spec-links" id="p-links"></ul>
+          </div>
+        </aside>
+      </div>
+
+      <div class="gallery" id="p-gallery" hidden></div>
+
+    </article>
+
+    <nav class="pager" id="pager" hidden>
+      <a class="pager-link pager-prev" id="pager-prev">
+        <span class="mono">Previous</span>
+        <strong id="pager-prev-title"></strong>
+      </a>
+      <a class="pager-link pager-next" id="pager-next">
+        <span class="mono">Next</span>
+        <strong id="pager-next-title"></strong>
+      </a>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="mono">© <span id="year">2026</span> Muhammad Akash</span>
+    <span class="mono dim">Built by hand. Hosted free on GitHub Pages.</span>
+  </div>
+</footer>
+
+<script src="project.js" defer></script>
+</body>
+</html>

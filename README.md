@@ -4,10 +4,13 @@ Single-page personal profile site. No build step, no dependencies, no framework.
 Open `index.html` and it works.
 
 ```
-index.html    structure + content
-styles.css    all styling (CSS custom properties, light/dark)
-script.js     theme toggle, sticky nav, mobile menu, scroll reveals
-og.png        1200x630 social preview card
+index.html       home page
+project.html     showcase template (one page per project)
+projects.json    the project data — the source of truth
+styles.css       all styling (CSS custom properties, light/dark)
+script.js        home page behaviour
+project.js       showcase renderer
+og.png           1200x630 social preview card
 ```
 
 ## Live
@@ -16,40 +19,65 @@ https://muhammad-akash.github.io/profile-site/
 
 Deployed from `main` via GitHub Pages (Settings → Pages → Deploy from a branch).
 
-## Editing
+## Showcase
 
-### Add or change a project
+Every project has its own page at `project.html?p=<slug>`. Nothing is generated
+at build time — `project.html` is one template, and `project.js` fills it from
+`projects.json` based on the `?p=` parameter. Add an entry to the JSON and the
+page exists.
 
-Find `.projects` in `index.html`. Each card is one block:
+### Adding a project
 
-```html
-<article class="project reveal">
-  <div class="project-top">
-    <span class="project-index mono">018</span>
-    <span class="project-platform mono">Android</span>
-  </div>
-  <h3 class="project-title">Project Name</h3>
-  <p class="project-desc">One line. What it does, not how.</p>
-  <ul class="tags"><li>Kotlin</li><li>Android</li></ul>
-</article>
+Append to `projects` in `projects.json`:
+
+```json
+{
+  "slug": "my-project",
+  "name": "My Project",
+  "platform": "Android",
+  "year": "2026",
+  "status": "Shipped",
+  "summary": "One line — what it is, not how.",
+  "tags": ["Kotlin", "Android"],
+  "stack": ["Kotlin", "Android", "Room"],
+  "cover": "img/my-project/cover.png",
+  "gallery": [
+    { "src": "img/my-project/1.png", "alt": "Home screen", "caption": "Home" }
+  ],
+  "body": [
+    { "h": "What it does", "p": "A paragraph." },
+    { "h": "Why it's interesting", "p": ["Paragraph one.", "Paragraph two."] }
+  ],
+  "links": { "repo": "https://github.com/…", "demo": null }
+}
 ```
 
-Cards flow into a responsive grid: three columns on wide screens, one on phones.
-The `project-platform` label is free text — `Android`, `Web`, `Desktop`, `Game`,
-`AI`, `Browser`, `Tools`.
+Field notes:
 
-To make a project clickable, wrap the title:
+- `slug` — lowercase, hyphenated, unique. That's the URL.
+- `cover` — leave `""` and the page renders a generated placeholder tile with
+  the project's initials. Drop a real screenshot in and it takes over.
+- `gallery` — empty array hides the gallery entirely.
+- `body` — a list of `{ h, p }` blocks. `p` is a string or an array of strings.
+- `links` — anything truthy renders; `null` hides it.
 
-```html
-<h3 class="project-title"><a href="https://…">Project Name</a></h3>
-```
+### The cards on the home page
 
-### Contact
+The work grid in `index.html` is a static copy of the same data — one `<a>`
+per project pointing at `project.html?p=<slug>`. Adding a project means adding
+an entry to `projects.json` **and** a matching card in `index.html`.
+
+### Screenshots
+
+Put images in `img/<slug>/` and reference them with a relative path
+(`img/chorus/1.png`). Nothing else needs to change.
+
+## Contact
 
 Email and WhatsApp are live in the Contact section. Both appear twice — once as
 the big link and once in the socials row — so a change means editing both.
 
-### Colors
+## Colors
 
 Top of `styles.css`, under `:root` (dark) and `[data-theme="light"]`.
 Change `--accent` and the whole site follows.
@@ -57,7 +85,7 @@ Change `--accent` and the whole site follows.
 ### Still placeholder
 
 - `og.png` — regenerate if the name or headline changes
-- Project cards have no links yet
+- Project pages have no screenshots yet, only the generated tiles
 
 ## Local preview
 
