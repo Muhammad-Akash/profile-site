@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your Name — Software Engineer</title>
+<meta name="description" content="Your Name builds fast, precise software. Portfolio, selected work, and contact." />
+<meta name="theme-color" content="#0a0a0b" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Your Name — Software Engineer" />
+<meta property="og:description" content="Portfolio, selected work, and contact." />
+<meta property="og:image" content="og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0a0b'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='700' text-anchor='middle' fill='%23c8ff4d'>Y</text></svg>" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Home">
+      <span class="brand-mark">Y</span>
+      <span class="brand-text">your<span class="dim">name</span></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle color theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.2v2.6M12 19.2v2.6M2.2 12h2.6M19.2 12h2.6M5.1 5.1l1.9 1.9M17 17l1.9 1.9M18.9 5.1L17 7M7 17l-1.9 1.9"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#stack">Stack</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ───────────────────────── HERO ───────────────────────── -->
+  <section class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+
+      <p class="eyebrow reveal">
+        <span class="dot" aria-hidden="true"></span>
+        Available for work — <span class="mono">2026</span>
+      </p>
+
+      <h1 class="hero-title reveal">
+        <span class="line">Your Name</span>
+        <span class="line line-2">builds things that <em>hold.</em></span>
+      </h1>
+
+      <p class="hero-sub reveal">
+        Software engineer focused on systems, interfaces, and the unglamorous
+        parts — the error paths, the edge cases, the parts nobody notices
+        because they just work.
+      </p>
+
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#work">
+          See the work
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+
+      <ul class="hero-meta reveal" aria-label="Quick facts">
+        <li><span class="k">Based</span><span class="v">Your City</span></li>
+        <li><span class="k">Focus</span><span class="v">Systems · Web · Tooling</span></li>
+        <li><span class="k">Status</span><span class="v accent">Open to work</span></li>
+      </ul>
+
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>C++</span><span>·</span><span>Rust</span><span>·</span><span>TypeScript</span><span>·</span>
+        <span>Systems</span><span>·</span><span>Interfaces</span><span>·</span><span>Tooling</span><span>·</span>
+        <span>C++</span><span>·</span><span>Rust</span><span>·</span><span>TypeScript</span><span>·</span>
+        <span>Systems</span><span>·</span><span>Interfaces</span><span>·</span><span>Tooling</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── ABOUT ───────────────────────── -->
+  <section class="section" id="about">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="section-num mono">01</span>
+        <h2 class="section-title">About</h2>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="lead">
+            I write software the way a carpenter builds a drawer — measured twice,
+            joined properly, and smooth on the inside where nobody looks.
+          </p>
+          <p>
+            Most of my time goes into systems-level work and the tooling around it:
+            performance-sensitive code, clean interfaces, and the small utilities
+            that save a team an hour a day. I care about things that compile without
+            warnings, behave under load, and fail honestly when they fail.
+          </p>
+          <p>
+            Currently <span class="accent">[your current role / what you're doing]</span>.
+            Previously <span class="accent">[previous thing]</span>.
+          </p>
+        </div>
+
+        <aside class="about-stats reveal">
+          <div class="stat">
+            <span class="stat-num">6+</span>
+            <span class="stat-label">Years shipping</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">30+</span>
+            <span class="stat-label">Projects built</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Edge cases handled</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── WORK ───────────────────────── -->
+  <section class="section" id="work">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="section-num mono">02</span>
+        <h2 class="section-title">Selected work</h2>
+      </header>
+
+      <div class="projects">
+
+        <article class="project reveal">
+          <div class="project-top">
+            <span class="project-index mono">001</span>
+            <span class="project-year mono">2025</span>
+          </div>
+          <h3 class="project-title">
+            <a href="#" target="_blank" rel="noopener">Project One</a>
+          </h3>
+          <p class="project-desc">
+            One or two sentences on the problem, what you built, and what made it
+            hard. Numbers beat adjectives — latency, throughput, users, time saved.
+          </p>
+          <ul class="tags">
+            <li>C++</li><li>Windows</li><li>Performance</li>
+          </ul>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-top">
+            <span class="project-index mono">002</span>
+            <span class="project-year mono">2025</span>
+          </div>
+          <h3 class="project-title">
+            <a href="#" target="_blank" rel="noopener">Project Two</a>
+          </h3>
+          <p class="project-desc">
+            What it does, who it's for, and the one constraint that shaped the
+            whole design. Keep it tight and specific.
+          </p>
+          <ul class="tags">
+            <li>TypeScript</li><li>Node</li><li>Postgres</li>
+          </ul>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-top">
+            <span class="project-index mono">003</span>
+            <span class="project-year mono">2024</span>
+          </div>
+          <h3 class="project-title">
+            <a href="#" target="_blank" rel="noopener">Project Three</a>
+          </h3>
+          <p class="project-desc">
+            A tool, a library, a product — say what it is plainly, then the
+            single most impressive true thing about it.
+          </p>
+          <ul class="tags">
+            <li>Rust</li><li>CLI</li><li>Open source</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <a class="more-link reveal" href="https://github.com/yourhandle" target="_blank" rel="noopener">
+        More on GitHub
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── STACK ───────────────────────── -->
+  <section class="section" id="stack">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="section-num mono">03</span>
+        <h2 class="section-title">Stack</h2>
+      </header>
+
+      <div class="stack-grid">
+        <div class="stack-group reveal">
+          <h3 class="stack-title mono">languages</h3>
+          <ul>
+            <li>C++</li><li>Rust</li><li>TypeScript</li><li>Python</li><li>SQL</li>
+          </ul>
+        </div>
+        <div class="stack-group reveal">
+          <h3 class="stack-title mono">systems</h3>
+          <ul>
+            <li>Windows internals</li><li>Linux</li><li>Concurrency</li><li>Networking</li>
+          </ul>
+        </div>
+        <div class="stack-group reveal">
+          <h3 class="stack-title mono">web</h3>
+          <ul>
+            <li>React</li><li>Node / Bun</li><li>Postgres</li><li>Tailwind</li>
+          </ul>
+        </div>
+        <div class="stack-group reveal">
+          <h3 class="stack-title mono">tooling</h3>
+          <ul>
+            <li>Git</li><li>CMake</li><li>Docker</li><li>CI/CD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── CONTACT ───────────────────────── -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="section-num mono">04</span>
+        <h2 class="section-title">Contact</h2>
+      </header>
+
+      <p class="contact-lead reveal">
+        Building something and need hands that don't flinch? Send a line.
+      </p>
+
+      <a class="contact-mail reveal" href="mailto:you@example.com">
+        you@example.com
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+
+      <ul class="socials reveal">
+        <li><a href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://x.com/yourhandle" target="_blank" rel="noopener">X</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="mono">© <span id="year">2026</span> Your Name</span>
+    <span class="mono dim">Built by hand. Hosted free on GitHub Pages.</span>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
