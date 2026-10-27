@@ -1,61 +1,75 @@
 # profile-site
 
-A single-page personal profile site. No build step, no dependencies, no framework.
+Single-page personal profile site. No build step, no dependencies, no framework.
 Open `index.html` and it works.
 
 ```
 index.html    structure + content
 styles.css    all styling (CSS custom properties, light/dark)
 script.js     theme toggle, sticky nav, mobile menu, scroll reveals
+og.png        1200x630 social preview card
 ```
 
-## Make it yours
+## Live
 
-Everything you need to change lives in `index.html`. Search and replace:
+https://muhammad-akash.github.io/profile-site/
 
-| Placeholder | Replace with |
-|---|---|
-| `Your Name` | your name |
-| `yourname` (brand) | short handle |
-| `Y` (brand mark) | your initial |
-| `Your City` | your city |
-| `you@example.com` | your email |
-| `yourhandle` | your GitHub / LinkedIn / X handles |
-| `Software Engineer` (in `<title>`) | your role |
-| `Project One/Two/Three` + descriptions | your real projects |
-| Stack lists | your real stack |
-| Stats under About | real numbers, or delete the block |
+Deployed from `main` via GitHub Pages (Settings → Pages → Deploy from a branch).
 
-Colors live at the top of `styles.css` under `:root` and `[data-theme="light"]`.
+## Editing
+
+### Add or change a project
+
+Find `.projects` in `index.html`. Each card is one block:
+
+```html
+<article class="project reveal">
+  <div class="project-top">
+    <span class="project-index mono">018</span>
+    <span class="project-platform mono">Android</span>
+  </div>
+  <h3 class="project-title">Project Name</h3>
+  <p class="project-desc">One line. What it does, not how.</p>
+  <ul class="tags"><li>Kotlin</li><li>Android</li></ul>
+</article>
+```
+
+Cards flow into a responsive grid — three columns on wide screens, one on phones.
+The `project-platform` label is free text: `Android`, `Web`, `Desktop`, `Game`, `AI`,
+`Browser`, `Tools`.
+
+To make a project clickable, wrap the title:
+
+```html
+<h3 class="project-title"><a href="https://…">Project Name</a></h3>
+```
+
+### Colors
+
+Top of `styles.css`, under `:root` (dark) and `[data-theme="light"]`.
 Change `--accent` and the whole site follows.
+
+### Still placeholder
+
+- `you@example.com` — email in the Contact section and its `mailto:`
+- Socials list — only GitHub is wired up
+- `og.png` — regenerate if the name or headline changes
 
 ## Local preview
 
-Any static server works:
-
 ```bash
 python -m http.server 8080
-# or
-npx serve .
 ```
 
 Then open http://localhost:8080.
 
-## Deploy — GitHub Pages
+## Deploy
 
-Already wired if you cloned this repo from the template:
+```bash
+git add -A
+git commit -m "update"
+git push
+```
 
-1. Push to `main`.
-2. Repo → Settings → Pages → Source: **Deploy from a branch** → `main` / `/ (root)`.
-3. Site lands at `https://<user>.github.io/<repo>/` in about a minute.
-
-Custom domain: add a `CNAME` file containing the bare domain, then point a
-`CNAME` DNS record at `<user>.github.io`.
-
-## Alternative free hosts
-
-- **Cloudflare Pages** — drag the folder in, unlimited bandwidth.
-- **Netlify** — drag the folder onto app.netlify.com/drop.
-- **Vercel** — `vercel --prod` in this directory.
-
-All three serve this folder as-is with zero configuration.
+Pages rebuilds in ~40 seconds. Custom domain later: add a `CNAME` file with the
+bare domain and point a `CNAME` DNS record at `muhammad-akash.github.io`.
