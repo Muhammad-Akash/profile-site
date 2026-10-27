@@ -72,9 +72,18 @@
   });
 
   /* ---------- reveal on scroll ---------- */
-  const revealables = document.querySelectorAll(".reveal");
+  const revealables = [...document.querySelectorAll(".reveal")];
 
-  if ("IntersectionObserver" in window) {
+  if (!("IntersectionObserver" in window)) {
+    revealables.forEach((el) => el.classList.add("is-in"));
+  } else {
+    // Above-the-fold content is shown synchronously: nothing that is already
+    // on screen should ever depend on an observer callback firing.
+    const inView = (el) => {
+      const r = el.getBoundingClientRect();
+      return r.top < window.innerHeight * 0.95 && r.bottom > 0;
+    };
+
     const io = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -85,9 +94,21 @@
       },
       { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
     );
-    revealables.forEach((el) => io.observe(el));
-  } else {
-    revealables.forEach((el) => el.classList.add("is-in"));
+
+    for (const el of revealables) {
+      if (inView(el)) el.classList.add("is-in");
+      else io.observe(el);
+    }
+
+    // Safety net: an element inside the viewport that is still hidden after
+    // load gets revealed anyway. A missed callback must never hide content.
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        revealables.forEach((el) => {
+          if (inView(el)) el.classList.add("is-in");
+        });
+      }, 1200);
+    });
   }
 
   /* ---------- active nav link ---------- */
