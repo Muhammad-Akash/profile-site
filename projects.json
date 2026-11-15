@@ -148,8 +148,10 @@
       "summary": "Islamic AI assistant — Android client over a Python backend.",
       "tags": ["Android", "Python", "AI"],
       "stack": ["Kotlin", "Android", "Python", "LLM API"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/ai-imam/cover.webp",
+      "gallery": [
+        { "src": "img/ai-imam/01-home.webp", "alt": "Ask", "caption": "The opening screen — an assistant that answers from scripture" }
+      ],
       "body": [
         {
           "h": "What it does",
@@ -217,8 +219,11 @@
       "summary": "Prayer times with a home-screen widget that resizes to any size.",
       "tags": ["Android", "Widget", "Kotlin"],
       "stack": ["Kotlin", "Android", "App Widgets", "WorkManager"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/my-masjid-azan/cover.webp",
+      "gallery": [
+        { "src": "img/my-masjid-azan/01-home.webp", "alt": "Prayer times", "caption": "Prayer times for the day, with a per-prayer alarm" },
+        { "src": "img/my-masjid-azan/02-qibla.webp", "alt": "Qibla", "caption": "Qibla — live bearing, distance to the Kaaba, sensor accuracy" }
+      ],
       "body": [
         {
           "h": "What it does",
@@ -240,8 +245,10 @@
       "summary": "Drive a desktop from a phone — Python server, Android client.",
       "tags": ["Python", "Android", "LAN"],
       "stack": ["Python", "CustomTkinter", "Android", "WebSocket"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/pc-controller/cover.webp",
+      "gallery": [
+        { "src": "img/pc-controller/01-home.webp", "alt": "Connect", "caption": "Connect — enter the PC address, or scan a QR code" }
+      ],
       "body": [
         {
           "h": "What it does",
@@ -286,8 +293,13 @@
       "summary": "Home-cooked meals — native Android app.",
       "tags": ["Android", "Kotlin", "Native"],
       "stack": ["Kotlin", "Android", "Jetpack"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/tuee/cover.webp",
+      "gallery": [
+        { "src": "img/tuee/01-cuisine.webp", "alt": "Cuisine", "caption": "Cuisine — meal plan, recipe shelf and shopping list" },
+        { "src": "img/tuee/02-recipes.webp", "alt": "Recipes", "caption": "Recipes — 41 dishes across 10 cuisines" },
+        { "src": "img/tuee/03-dishes.webp", "alt": "Dishes", "caption": "Dishes — every recipe with calories and protein" },
+        { "src": "img/tuee/04-chat.webp", "alt": "Chat", "caption": "Chat — a private thread for two, plus a kitchen assistant" }
+      ],
       "body": [
         {
           "h": "What it does",
@@ -332,8 +344,12 @@
       "summary": "Qibla direction from GPS and sensors, no advertising.",
       "tags": ["Android", "Kotlin", "Sensors"],
       "stack": ["Kotlin", "Android", "Location", "Magnetometer"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/no-ads-qibla-compass/cover.webp",
+      "gallery": [
+        { "src": "img/no-ads-qibla-compass/01-compass.webp", "alt": "Compass", "caption": "Compass — live bearing with no ads" },
+        { "src": "img/no-ads-qibla-compass/02-direction.webp", "alt": "Direction", "caption": "Direction — bearing, distance to the Kaaba, last update" },
+        { "src": "img/no-ads-qibla-compass/03-map.webp", "alt": "Map", "caption": "Map — where you are, against the Kaaba" }
+      ],
       "body": [
         {
           "h": "What it does",

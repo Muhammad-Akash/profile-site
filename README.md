@@ -115,29 +115,37 @@ Screenshots live in `img/<slug>/` and are referenced by relative path.
 Images are WebP, not PNG — the 28 files came to 9.3 MB as PNG and 1.6 MB as
 WebP with no visible difference.
 
-Four projects have real screens captured from the devices — Family Safety,
-Bloomly, ITN VPN and Meherpur Sheba. The other 17 still render a generated
-initials tile; drop a `cover.webp` in `img/<slug>/` and add it to that
-project's `"cover"` field to replace it.
+Fourteen of the 21 projects are Android. Nine of those have real screens
+captured from the Pixel 9a — Family Safety, Bloomly, ITN VPN, Meherpur Sheba,
+Tuee, AI Imam, My Masjid Adhan, Qibla Compass and PC Controller. The rest
+still render a generated initials tile; drop a `cover.webp` in `img/<slug>/`
+and add it to that project's `"cover"` field to replace it.
+
+Three portfolio projects have no imagery because they aren't installable apps:
+Neon Breaker, DX Ball Antigravity and Flappy Bird are single-file HTML games.
+Portable AI Assistant, Calling Bell and Volume Control Pro are not installed
+on the device, so there was nothing to capture.
 
 `card.webp` is transparent on purpose: the tile background comes from the
 `--tint` on the card, so it adapts to light and dark automatically.
 
 ### Regenerating covers and cards
 
-`tools/covers.html` and `tools/cards.html` are the sources for those images —
-real HTML rendered in Chrome, so they use the site's own Fraunces type and
-palette rather than a lookalike font.
+`tools/art.html` is the single source for all of them — real HTML rendered in
+Chrome, so they use the site's own Fraunces type and palette rather than a
+lookalike font. Every project is one entry in the `DATA` array at the bottom:
+accent colour, kicker, headline, subtitle, meta pills, and which screenshots
+to use.
 
 ```powershell
 python -m http.server 8000
 # then screenshot each one, e.g.
-#   http://localhost:8000/tools/covers.html?p=bloomly  -> img/bloomly/cover.webp
-#   http://localhost:8000/tools/cards.html?p=bloomly   -> img/bloomly/card.webp
+#   http://localhost:8000/tools/art.html?type=cover&p=bloomly  -> img/bloomly/cover.webp
+#   http://localhost:8000/tools/art.html?type=card&p=bloomly   -> img/bloomly/card.webp
 ```
 
-Edit the copy in those two files, re-shoot, and the site picks up the new
-images. `card.webp` must be captured with a transparent background.
+Add an entry to `DATA`, re-shoot, done. Covers render at 1600 × 650; cards at
+800 × 800 and **must** be captured with a transparent background.
 
 `MOCKUP-PROMPTS.md` has design briefs and generation prompts for the four most
 recent apps — useful now mainly as a written spec of each screen.
