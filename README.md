@@ -1,16 +1,16 @@
-# profile-site
+# Muhammad Akash — portfolio
 
-Single-page personal profile site. No build step, no dependencies, no framework.
-Open `index.html` and it works.
+A single-page profile plus one page per project. No build step, no framework,
+no dependencies. Open `index.html` and it works.
 
 ```
-index.html       home page
-project.html     showcase template (one page per project)
-projects.json    the project data — the source of truth
-styles.css       all styling (CSS custom properties, light/dark)
-script.js        home page behaviour
-project.js       showcase renderer
-og.png           1200x630 social preview card
+index.html      home: hero, work grid, toolkit, about, contact
+project.html    showcase template (one page per project, ?p=<slug>)
+project.js      renders a project from projects.json
+projects.json   the project data — the source of truth
+styles.css      all styling (tokens at the top)
+script.js       light/dark theme + year
+og.png          social preview card
 ```
 
 ## Live
@@ -19,16 +19,43 @@ https://muhammad-akash.github.io/profile-site/
 
 Deployed from `main` via GitHub Pages (Settings → Pages → Deploy from a branch).
 
-## Showcase
+## Preview locally
 
-Every project has its own page at `project.html?p=<slug>`. Nothing is generated
-at build time — `project.html` is one template, and `project.js` fills it from
-`projects.json` based on the `?p=` parameter. Add an entry to the JSON and the
-page exists.
+```powershell
+python -m http.server 8000
+```
 
-### Adding a project
+Then open <http://localhost:8000>.
 
-Append to `projects` in `projects.json`:
+Project pages fetch `projects.json`, so you need the server — opening
+`project.html` straight off disk won't load the data. The home page itself
+works from `file://`.
+
+## Design
+
+Warm editorial: cream paper, a large serif sentence for a hero, illustrated
+cards with a soft lift on hover.
+
+| Token | Light | Dark |
+|---|---|---|
+| Page | `#f6f5f1` | `#1c1b18` |
+| Cards | `#fcfbf7` | `#252420` |
+| Borders | `#e6e3e1` | `#3a3835` |
+| Ink | `#353534` | `#c2bfba` |
+| Crimson (links, hover) | `#5f023e` | `#e85aab` |
+| Sea blue (accents) | `#04a5bb` | `#2bc4da` |
+
+Type: **Fraunces** for display, **Newsreader** for body, **Lato** for sans.
+All three load from Google Fonts.
+
+The theme follows the OS on first visit, then remembers the visitor's choice in
+`localStorage` under `ma-theme`.
+
+## Adding a project
+
+Two places, both required:
+
+**1.** Append to `projects` in `projects.json`:
 
 ```json
 {
@@ -52,48 +79,36 @@ Append to `projects` in `projects.json`:
 }
 ```
 
+**2.** Add a card to the `.grid` in `index.html`, copying an existing block:
+
+```html
+<a class="card-link" href="project.html?p=my-project">
+  <article class="card">
+    <div class="card-art" style="--tint:#2f9e8f"><span>MP</span></div>
+    <h3>My Project</h3>
+    <p class="card-desc">One line — what it is, not how.</p>
+    <div class="meta"><span>Android</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+  </article>
+</a>
+```
+
 Field notes:
 
 - `slug` — lowercase, hyphenated, unique. That's the URL.
-- `cover` — leave `""` and the page renders a generated placeholder tile with
-  the project's initials. Drop a real screenshot in and it takes over.
+- `cover` — leave `""` and the page renders a generated initials tile.
 - `gallery` — empty array hides the gallery entirely.
 - `body` — a list of `{ h, p }` blocks. `p` is a string or an array of strings.
 - `links` — anything truthy renders; `null` hides it.
+- `--tint` on the card art is a hue; the tile mixes it with the page colour, so
+  it adapts to light and dark automatically.
 
-### The cards on the home page
+## Images
 
-The work grid in `index.html` is a static copy of the same data — one `<a>`
-per project pointing at `project.html?p=<slug>`. Adding a project means adding
-an entry to `projects.json` **and** a matching card in `index.html`.
-
-### Screenshots
-
-Put images in `img/<slug>/` and reference them with a relative path
+Put screenshots in `img/<slug>/` and reference them with a relative path
 (`img/chorus/1.png`). Nothing else needs to change.
 
-## Contact
-
-Email and WhatsApp are live in the Contact section. Both appear twice — once as
-the big link and once in the socials row — so a change means editing both.
-
-## Colors
-
-Top of `styles.css`, under `:root` (dark) and `[data-theme="light"]`.
-Change `--accent` and the whole site follows.
-
-### Still placeholder
-
-- `og.png` — regenerate if the name or headline changes
-- Project pages have no screenshots yet, only the generated tiles
-
-## Local preview
-
-```bash
-python -m http.server 8080
-```
-
-Then open http://localhost:8080.
+`MOCKUP-PROMPTS.md` has design briefs and generation prompts for the four most
+recent apps.
 
 ## Deploy
 
@@ -105,3 +120,8 @@ git push
 
 Pages rebuilds in about 40 seconds. Custom domain later: add a `CNAME` file with
 the bare domain and point a `CNAME` DNS record at `muhammad-akash.github.io`.
+
+## Other designs
+
+`v1/` (the original dark design) and `v2/` (a condensed navy design) are kept in
+this repo for reference. See `DESIGNS.md`.

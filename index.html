@@ -1,423 +1,370 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Muhammad Akash — Software Engineer</title>
-<meta name="description" content="Muhammad Akash builds apps, tools, and games. Android, desktop, and web — eighteen shipped projects." />
-<meta name="theme-color" content="#0a0a0b" />
+<title>Muhammad Akash</title>
+<meta name="description" content="Muhammad Akash builds apps, tools, and games. Android, desktop, web — twenty-one projects." />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#f6f5f1" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Muhammad Akash — Software Engineer" />
-<meta property="og:description" content="Android, desktop, and web. Eighteen shipped projects." />
+<meta property="og:title" content="Muhammad Akash" />
+<meta property="og:description" content="Builds apps, tools, and games that hold. Android, desktop, web." />
 <meta property="og:url" content="https://muhammad-akash.github.io/profile-site/" />
 <meta property="og:image" content="https://muhammad-akash.github.io/profile-site/og.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://muhammad-akash.github.io/profile-site/og.png" />
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0a0b'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='700' text-anchor='middle' fill='%23c8ff4d'>M</text></svg>" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23f6f5f1'/><text x='50' y='72' font-size='62' font-family='Georgia,serif' text-anchor='middle' fill='%235f023e'>M</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Lato:wght@400;700&display=swap" />
 <link rel="stylesheet" href="styles.css" />
-<script>document.documentElement.classList.add('js');</script>
+
+<script>
+  (function () {
+    var h = document.documentElement;
+    var saved = null;
+    try { saved = localStorage.getItem('ma-theme'); } catch (e) {}
+    if (saved === 'dark' || saved === 'light') h.dataset.theme = saved;
+    else if (matchMedia('(prefers-color-scheme: dark)').matches) h.dataset.theme = 'dark';
+    else h.dataset.theme = 'light';
+  })();
+</script>
 </head>
 <body>
 
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#work">Skip to work</a>
 
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a class="brand" href="#top" aria-label="Home">
-      <span class="brand-mark">M</span>
-      <span class="brand-text">muhammad<span class="dim">akash</span></span>
-    </a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M13.5 4.5 21 12l-7.5 7.5M21 12H3"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.2v2.4M12 19.4v2.4M2.2 12h2.4M19.4 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M12.4 19.1a.5.5 0 0 1-.8 0c-5.2-5.6-5.2-15.7 0-21.1"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 25 25">
+      <g fill="none">
+        <path fill="currentColor" d="M12.79 18.34a.41.41 0 0 1-.59 0c-4-4.22-4-12.11 0-16.32a.4.4 0 0 1 .59 0c4.06 4.21 4.06 12.1 0 16.32"/>
+        <path fill="currentColor" d="M12.21 21.89a12.63 12.63 0 0 0-11.4-9.16.3.3 0 0 0-.31.33 11.67 11.67 0 0 0 12 10h.06a11.67 11.67 0 0 0 12-10 .3.3 0 0 0-.31-.33 12.63 12.63 0 0 0-11.4 9.16.3.3 0 0 1-.64 0"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
 
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#stack">Stack</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<nav class="navbar" aria-label="Main">
+  <a class="logo" href="#" aria-label="Muhammad Akash, home">
+    <svg class="logo-mark" viewBox="0 0 25 25" aria-hidden="true">
+      <g fill="none">
+        <path fill="currentColor" d="M12.79 18.34a.41.41 0 0 1-.59 0c-4-4.22-4-12.11 0-16.32a.4.4 0 0 1 .59 0c4.06 4.21 4.06 12.1 0 16.32"/>
+        <path fill="currentColor" d="M12.21 21.89a12.63 12.63 0 0 0-11.4-9.16.3.3 0 0 0-.31.33 11.67 11.67 0 0 0 12 10h.06a11.67 11.67 0 0 0 12-10 .3.3 0 0 0-.31-.33 12.63 12.63 0 0 0-11.4 9.16.3.3 0 0 1-.64 0"/>
+      </g>
+    </svg>
+    <span class="logo-word">Muhammad Akash</span>
+  </a>
 
-    <div class="nav-actions">
-      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle color theme">
-        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.2v2.6M12 19.2v2.6M2.2 12h2.6M19.2 12h2.6M5.1 5.1l1.9 1.9M17 17l1.9 1.9M18.9 5.1L17 7M7 17l-1.9 1.9"/></svg>
-        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
-      </button>
-      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span>
-      </button>
-    </div>
+  <div class="nav-right">
+    <a class="nav-link" href="#work">Work</a>
+    <a class="nav-link" href="#stack">Stack</a>
+    <a class="nav-link" href="#about">About</a>
+    <a class="nav-link" href="#contact">Contact</a>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour theme">
+      <svg class="ico ico-sun"><use href="#i-sun"/></svg>
+      <svg class="ico ico-moon"><use href="#i-moon"/></svg>
+    </button>
   </div>
+</nav>
 
-  <div class="mobile-menu" id="mobile-menu" hidden>
-    <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="#stack">Stack</a>
-    <a href="#contact">Contact</a>
-  </div>
-</header>
+<main>
+  <div class="page-wrapper">
 
-<main id="main">
-
-  <!-- ───────────────────────── HERO ───────────────────────── -->
-  <section class="hero" id="top">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="container">
-
-      <p class="eyebrow reveal">
-        <span class="dot" aria-hidden="true"></span>
-        Available for work — <span class="mono">2026</span>
-      </p>
-
-      <h1 class="hero-title reveal">
-        <span class="line">Muhammad Akash</span>
-        <span class="line line-2">builds things that <em>hold.</em></span>
+    <header class="page-header">
+      <h1 class="title1 cascade" style="--cascade:0">
+        <b>Muhammad Akash</b> builds apps, tools, and games that hold.
       </h1>
-
-      <p class="hero-sub reveal">
-        Android apps, desktop tools, games, and the glue between them.
-        Seventeen shipped projects — most of them built because something
-        small was annoying and nobody else had fixed it.
+      <p class="subtitle cascade" style="--cascade:1">
+        Software engineer in Bangladesh — Android, desktop, web, and the glue between them.
+        Currently <b>open to work</b>.
       </p>
+    </header>
 
-      <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="#work">
-          See the work
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-        </a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
-      </div>
+    <div class="spacer-2xl"></div>
 
-      <ul class="hero-meta reveal" aria-label="Quick facts">
-        <li><span class="k">Based</span><span class="v">Bangladesh</span></li>
-        <li><span class="k">Focus</span><span class="v">Android · Desktop · Web</span></li>
-        <li><span class="k">Status</span><span class="v accent">Open to work</span></li>
-      </ul>
+    <div class="cascade-fade" style="--cascade:2">
 
-    </div>
+      <section id="work">
+        <div class="section-head">
+          <h2 class="garden-title">The Work</h2>
+          <p class="subheader">
+            Twenty-one projects, most of them built because something small was annoying
+            and nobody else had fixed it.
+            <a class="readmore" href="#stack">The toolkit <svg class="ico"><use href="#i-arrow"/></svg></a>
+          </p>
+        </div>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Android</span><span>·</span><span>Kotlin</span><span>·</span><span>Python</span><span>·</span>
-        <span>JavaScript</span><span>·</span><span>Rust</span><span>·</span><span>C#</span><span>·</span>
-        <span>Android</span><span>·</span><span>Kotlin</span><span>·</span><span>Python</span><span>·</span>
-        <span>JavaScript</span><span>·</span><span>Rust</span><span>·</span><span>C#</span><span>·</span>
-      </div>
-    </div>
-  </section>
+        <div class="grid">
 
-  <!-- ───────────────────────── ABOUT ───────────────────────── -->
-  <section class="section" id="about">
-    <div class="container">
-      <header class="section-head reveal">
-        <span class="section-num mono">01</span>
-        <h2 class="section-title">About</h2>
-      </header>
+          <a class="card-link" href="project.html?p=family-safe">
+            <article class="card">
+              <div class="card-art" style="--tint:#e0705c"><span>FS</span></div>
+              <h3>Family Safety</h3>
+              <p class="card-desc">Parental control suite — location trail, screen capture, and a supervised browser.</p>
+              <div class="meta"><span>Android</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+            </article>
+          </a>
 
-      <div class="about-grid">
-        <div class="about-copy reveal">
-          <p class="lead">
-            I build the tool that fixes the small annoyance, then keep building
-            until it's a real product.
+          <a class="card-link" href="project.html?p=bloomly">
+            <article class="card">
+              <div class="card-art" style="--tint:#2f9e8f"><span>BL</span></div>
+              <h3>Bloomly</h3>
+              <p class="card-desc">Parenting companion that changes with the stage — preparing, expecting, or newborn.</p>
+              <div class="meta"><span>Android</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=itn-vpn">
+            <article class="card">
+              <div class="card-art" style="--tint:#7558b2"><span>IT</span></div>
+              <h3>ITN VPN</h3>
+              <p class="card-desc">WireGuard client for Android, packaged for Play submission.</p>
+              <div class="meta"><span>Android</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=meherpur-sheba">
+            <article class="card">
+              <div class="card-art" style="--tint:#a8306a"><span>MS</span></div>
+              <h3>Meherpur Sheba</h3>
+              <p class="card-desc">Client work — a district services directory, public app plus admin app.</p>
+              <div class="meta"><span>Android</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=chorus">
+            <article class="card">
+              <div class="card-art" style="--tint:#c98a2e"><span>CH</span></div>
+              <h3>Chorus</h3>
+              <p class="card-desc">Pools RAM and VRAM across machines on a LAN to run one large model.</p>
+              <div class="meta"><span>AI</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=ai-imam">
+            <article class="card">
+              <div class="card-art" style="--tint:#4c8f5f"><span>AI</span></div>
+              <h3>Ai Imam</h3>
+              <p class="card-desc">Islamic AI assistant — Android client over a Python backend.</p>
+              <div class="meta"><span>Android</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=loadshedding-alert">
+            <article class="card">
+              <div class="card-art" style="--tint:#e0705c"><span>LS</span></div>
+              <h3>LoadShedding Alert</h3>
+              <p class="card-desc">Local-first power-cut pre-alerts, built for Bangladesh.</p>
+              <div class="meta"><span>Web</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=automated-chatbot">
+            <article class="card">
+              <div class="card-art" style="--tint:#2f9e8f"><span>AC</span></div>
+              <h3>Automated Chatbot</h3>
+              <p class="card-desc">Custom AI chatbot answering on Messenger and WhatsApp.</p>
+              <div class="meta"><span>AI</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=my-masjid-azan">
+            <article class="card">
+              <div class="card-art" style="--tint:#7558b2"><span>MA</span></div>
+              <h3>My Masjid Azan</h3>
+              <p class="card-desc">Prayer times with a home-screen widget that resizes to any size.</p>
+              <div class="meta"><span>Android</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=pc-controller">
+            <article class="card">
+              <div class="card-art" style="--tint:#a8306a"><span>PC</span></div>
+              <h3>PC Controller</h3>
+              <p class="card-desc">Drive a desktop from a phone — Python server, Android client.</p>
+              <div class="meta"><span>Desktop</span><svg class="growth"><use href="#i-sprout"/></svg><span>2025</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=youtube-fastforward">
+            <article class="card">
+              <div class="card-art" style="--tint:#c98a2e"><span>YF</span></div>
+              <h3>YouTube FastForward</h3>
+              <p class="card-desc">Playback speed plus measurement-driven volume levelling.</p>
+              <div class="meta"><span>Browser</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=tuee">
+            <article class="card">
+              <div class="card-art" style="--tint:#4c8f5f"><span>TU</span></div>
+              <h3>Tuee</h3>
+              <p class="card-desc">Home-cooked meals — native Android app.</p>
+              <div class="meta"><span>Android</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=portable-ai-assistant">
+            <article class="card">
+              <div class="card-art" style="--tint:#e0705c"><span>PA</span></div>
+              <h3>Portable AI Assistant</h3>
+              <p class="card-desc">Pocket assistant wired to a hosted LLM API.</p>
+              <div class="meta"><span>Android</span><svg class="growth"><use href="#i-sprout"/></svg><span>2025</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=no-ads-qibla-compass">
+            <article class="card">
+              <div class="card-art" style="--tint:#2f9e8f"><span>QC</span></div>
+              <h3>No Ads Qibla Compass</h3>
+              <p class="card-desc">Qibla direction from GPS and sensors, no advertising.</p>
+              <div class="meta"><span>Android</span><svg class="growth"><use href="#i-sprout"/></svg><span>2025</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=calling-bell-app">
+            <article class="card">
+              <div class="card-art" style="--tint:#7558b2"><span>CB</span></div>
+              <h3>Calling Bell App</h3>
+              <p class="card-desc">Two phones on one Wi-Fi act as doorbell and receiver.</p>
+              <div class="meta"><span>Android</span><svg class="growth"><use href="#i-sprout"/></svg><span>2025</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=shortloop">
+            <article class="card">
+              <div class="card-art" style="--tint:#a8306a"><span>SL</span></div>
+              <h3>ShortLoop</h3>
+              <p class="card-desc">Pipeline for producing short-form video, end to end.</p>
+              <div class="meta"><span>Tools</span><svg class="growth"><use href="#i-sprout"/></svg><span>2026</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=wattscope">
+            <article class="card">
+              <div class="card-art" style="--tint:#c98a2e"><span>WS</span></div>
+              <h3>WattScope</h3>
+              <p class="card-desc">Power-supply wattage calculator for PC builds.</p>
+              <div class="meta"><span>Desktop</span><svg class="growth"><use href="#i-sprout"/></svg><span>2025</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=volume-control-pro">
+            <article class="card">
+              <div class="card-art" style="--tint:#4c8f5f"><span>VC</span></div>
+              <h3>Volume Control Pro</h3>
+              <p class="card-desc">Fine-grained volume control the stock panel never gave you.</p>
+              <div class="meta"><span>Android</span><svg class="growth"><use href="#i-sprout"/></svg><span>2025</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=neon-breaker">
+            <article class="card">
+              <div class="card-art" style="--tint:#e0705c"><span>NB</span></div>
+              <h3>Neon Breaker</h3>
+              <p class="card-desc">Offline brick breaker — one level, three lives, no install.</p>
+              <div class="meta"><span>Game</span><svg class="growth"><use href="#i-sprout"/></svg><span>2025</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=dx-ball-antigravity">
+            <article class="card">
+              <div class="card-art" style="--tint:#2f9e8f"><span>DX</span></div>
+              <h3>DX Ball Antigravity</h3>
+              <p class="card-desc">DX Ball variant with dynamic ball-speed scaling.</p>
+              <div class="meta"><span>Game</span><svg class="growth"><use href="#i-sprout"/></svg><span>2025</span></div>
+            </article>
+          </a>
+
+          <a class="card-link" href="project.html?p=flappy-bird">
+            <article class="card">
+              <div class="card-art" style="--tint:#7558b2"><span>FB</span></div>
+              <h3>Flappy Bird</h3>
+              <p class="card-desc">Clone in a single HTML file, open and play.</p>
+              <div class="meta"><span>Game</span><svg class="growth"><use href="#i-sprout"/></svg><span>2024</span></div>
+            </article>
+          </a>
+
+        </div>
+      </section>
+
+      <section id="stack" class="section-gap">
+        <div class="section-head">
+          <h2 class="garden-title">The Toolkit</h2>
+          <p class="subheader">Chosen per project, not per fashion.</p>
+        </div>
+
+        <div class="list-grid">
+          <div class="list-card">
+            <h3>Languages</h3>
+            <ul><li>Kotlin / Java</li><li>Python</li><li>JavaScript</li><li>C#</li><li>Rust</li></ul>
+          </div>
+          <div class="list-card">
+            <h3>Platforms</h3>
+            <ul><li>Android</li><li>Windows desktop</li><li>Web / PWA</li><li>Browser extensions</li></ul>
+          </div>
+          <div class="list-card">
+            <h3>Built with</h3>
+            <ul><li>Tauri + React</li><li>FastAPI</li><li>.NET</li><li>Canvas / WebGL</li></ul>
+          </div>
+          <div class="list-card">
+            <h3>Tooling</h3>
+            <ul><li>Git</li><li>Gradle</li><li>Docker</li><li>Vercel</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section-gap">
+        <div class="section-head">
+          <h2 class="garden-title">About</h2>
+        </div>
+        <div class="prose">
+          <p>
+            I build the tool that fixes the small annoyance, then keep building until it's
+            a real product. Most of what's here started as a personal itch: an ad-free app
+            because the store versions were unusable, a volume control that actually
+            controls volume, a way to pool two machines into one big language model.
           </p>
           <p>
-            Most of what's here started as a personal itch: an ad-free app
-            because the store versions were unusable, a volume control that
-            actually controls volume, a way to pool two machines into one big
-            language model. Android, desktop, browser, and a bit of everything
-            underneath.
-          </p>
-          <p>
-            Currently <span class="accent">building and shipping — open to work</span>.
+            Android, desktop, browser, and a bit of everything underneath. Currently
+            <b>building and shipping — open to work</b>.
           </p>
         </div>
+      </section>
 
-        <aside class="about-stats reveal">
-          <div class="stat">
-            <span class="stat-num">17</span>
-            <span class="stat-label">Shipped projects</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">5</span>
-            <span class="stat-label">Platforms</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">∞</span>
-            <span class="stat-label">Edge cases handled</span>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- ───────────────────────── WORK ───────────────────────── -->
-  <section class="section" id="work">
-    <div class="container">
-      <header class="section-head reveal">
-        <span class="section-num mono">02</span>
-        <h2 class="section-title">Work</h2>
-      </header>
-
-      <p class="work-intro reveal">
-        Seventeen shipped projects, each with its own page — what it does, what
-        it's built with, and the parts that were hard. Open any card.
-      </p>
-
-      <div class="projects">
-
-        <a class="project reveal" href="project.html?p=chorus">
-          <div class="project-top">
-            <span class="project-index mono">001</span>
-            <span class="project-platform mono">AI</span>
-          </div>
-          <h3 class="project-title">Chorus</h3>
-          <p class="project-desc">Pools RAM and VRAM across machines on a LAN to run one large model.</p>
-          <ul class="tags"><li>Tauri</li><li>React</li><li>Rust</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=ai-imam">
-          <div class="project-top">
-            <span class="project-index mono">002</span>
-            <span class="project-platform mono">Android</span>
-          </div>
-          <h3 class="project-title">Ai Imam</h3>
-          <p class="project-desc">Islamic AI assistant — Android client over a Python backend.</p>
-          <ul class="tags"><li>Android</li><li>Python</li><li>AI</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=loadshedding-alert">
-          <div class="project-top">
-            <span class="project-index mono">003</span>
-            <span class="project-platform mono">Web</span>
-          </div>
-          <h3 class="project-title">LoadShedding Alert</h3>
-          <p class="project-desc">Local-first power-cut pre-alerts, built for Bangladesh.</p>
-          <ul class="tags"><li>FastAPI</li><li>Python</li><li>Docker</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=automated-chatbot">
-          <div class="project-top">
-            <span class="project-index mono">004</span>
-            <span class="project-platform mono">AI</span>
-          </div>
-          <h3 class="project-title">Automated Chatbot</h3>
-          <p class="project-desc">Custom AI chatbot answering on Messenger and WhatsApp.</p>
-          <ul class="tags"><li>Python</li><li>AI</li><li>Bots</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=my-masjid-azan">
-          <div class="project-top">
-            <span class="project-index mono">005</span>
-            <span class="project-platform mono">Android</span>
-          </div>
-          <h3 class="project-title">My Masjid Azan</h3>
-          <p class="project-desc">Prayer times with a home-screen widget that resizes to any size.</p>
-          <ul class="tags"><li>Android</li><li>Widget</li><li>Kotlin</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=pc-controller">
-          <div class="project-top">
-            <span class="project-index mono">006</span>
-            <span class="project-platform mono">Desktop</span>
-          </div>
-          <h3 class="project-title">PC Controller</h3>
-          <p class="project-desc">Drive a desktop from a phone — Python server, Android client.</p>
-          <ul class="tags"><li>Python</li><li>Android</li><li>LAN</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=youtube-fastforward">
-          <div class="project-top">
-            <span class="project-index mono">007</span>
-            <span class="project-platform mono">Browser</span>
-          </div>
-          <h3 class="project-title">YouTube FastForward</h3>
-          <p class="project-desc">Playback speed plus measurement-driven volume levelling.</p>
-          <ul class="tags"><li>Chrome</li><li>JavaScript</li><li>Extension</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=tuee">
-          <div class="project-top">
-            <span class="project-index mono">008</span>
-            <span class="project-platform mono">Android</span>
-          </div>
-          <h3 class="project-title">Tuee</h3>
-          <p class="project-desc">Home-cooked meals — native Android app.</p>
-          <ul class="tags"><li>Android</li><li>Kotlin</li><li>Native</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=portable-ai-assistant">
-          <div class="project-top">
-            <span class="project-index mono">009</span>
-            <span class="project-platform mono">Android</span>
-          </div>
-          <h3 class="project-title">Portable AI Assistant</h3>
-          <p class="project-desc">Pocket assistant wired to a hosted LLM API.</p>
-          <ul class="tags"><li>Android</li><li>Python</li><li>API</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=no-ads-qibla-compass">
-          <div class="project-top">
-            <span class="project-index mono">010</span>
-            <span class="project-platform mono">Android</span>
-          </div>
-          <h3 class="project-title">No Ads Qibla Compass</h3>
-          <p class="project-desc">Qibla direction from GPS and sensors, no advertising.</p>
-          <ul class="tags"><li>Android</li><li>Kotlin</li><li>Sensors</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=calling-bell-app">
-          <div class="project-top">
-            <span class="project-index mono">011</span>
-            <span class="project-platform mono">Android</span>
-          </div>
-          <h3 class="project-title">Calling Bell App</h3>
-          <p class="project-desc">Two phones on one Wi-Fi act as doorbell and receiver.</p>
-          <ul class="tags"><li>Android</li><li>Kotlin</li><li>LAN</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=shortloop">
-          <div class="project-top">
-            <span class="project-index mono">012</span>
-            <span class="project-platform mono">Tools</span>
-          </div>
-          <h3 class="project-title">ShortLoop</h3>
-          <p class="project-desc">Pipeline for producing short-form video, end to end.</p>
-          <ul class="tags"><li>Python</li><li>Automation</li><li>API</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=wattscope">
-          <div class="project-top">
-            <span class="project-index mono">013</span>
-            <span class="project-platform mono">Desktop</span>
-          </div>
-          <h3 class="project-title">WattScope</h3>
-          <p class="project-desc">Power-supply wattage calculator for PC builds.</p>
-          <ul class="tags"><li>C#</li><li>.NET</li><li>Desktop</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=volume-control-pro">
-          <div class="project-top">
-            <span class="project-index mono">014</span>
-            <span class="project-platform mono">Android</span>
-          </div>
-          <h3 class="project-title">Volume Control Pro</h3>
-          <p class="project-desc">Fine-grained volume control the stock panel never gave you.</p>
-          <ul class="tags"><li>Android</li><li>Kotlin</li><li>Audio</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=neon-breaker">
-          <div class="project-top">
-            <span class="project-index mono">015</span>
-            <span class="project-platform mono">Game</span>
-          </div>
-          <h3 class="project-title">Neon Breaker</h3>
-          <p class="project-desc">Offline brick breaker — one level, three lives, no install.</p>
-          <ul class="tags"><li>JavaScript</li><li>Canvas</li><li>Game</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=dx-ball-antigravity">
-          <div class="project-top">
-            <span class="project-index mono">016</span>
-            <span class="project-platform mono">Game</span>
-          </div>
-          <h3 class="project-title">DX Ball Antigravity</h3>
-          <p class="project-desc">DX Ball variant with dynamic ball-speed scaling.</p>
-          <ul class="tags"><li>JavaScript</li><li>Canvas</li><li>Game</li></ul>
-        </a>
-
-        <a class="project reveal" href="project.html?p=flappy-bird">
-          <div class="project-top">
-            <span class="project-index mono">017</span>
-            <span class="project-platform mono">Game</span>
-          </div>
-          <h3 class="project-title">Flappy Bird</h3>
-          <p class="project-desc">Clone in a single HTML file, open and play.</p>
-          <ul class="tags"><li>HTML</li><li>Canvas</li><li>Game</li></ul>
-        </a>
-
-      </div>
-
-      <a class="more-link reveal" href="https://github.com/Muhammad-Akash" target="_blank" rel="noopener">
-        More on GitHub
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- ───────────────────────── STACK ───────────────────────── -->
-  <section class="section" id="stack">
-    <div class="container">
-      <header class="section-head reveal">
-        <span class="section-num mono">03</span>
-        <h2 class="section-title">Stack</h2>
-      </header>
-
-      <div class="stack-grid">
-        <div class="stack-group reveal">
-          <h3 class="stack-title mono">languages</h3>
-          <ul>
-            <li>Kotlin / Java</li><li>Python</li><li>JavaScript</li><li>C#</li><li>Rust</li>
-          </ul>
+      <section id="contact" class="section-gap">
+        <div class="section-head">
+          <h2 class="garden-title">Say hello</h2>
+          <p class="subheader">Building something and need hands that don't flinch?</p>
         </div>
-        <div class="stack-group reveal">
-          <h3 class="stack-title mono">platforms</h3>
-          <ul>
-            <li>Android</li><li>Windows desktop</li><li>Web / PWA</li><li>Browser extensions</li>
-          </ul>
+        <div class="contact-row">
+          <a class="contact-link" href="mailto:Muhammadmahmudulalamakash@gmail.com">
+            Muhammadmahmudulalamakash@gmail.com
+          </a>
+          <span class="contact-sep" aria-hidden="true">·</span>
+          <a class="contact-link" href="https://wa.me/8801774593217" target="_blank" rel="noopener">WhatsApp</a>
+          <span class="contact-sep" aria-hidden="true">·</span>
+          <a class="contact-link" href="https://github.com/Muhammad-Akash" target="_blank" rel="noopener">GitHub</a>
         </div>
-        <div class="stack-group reveal">
-          <h3 class="stack-title mono">built with</h3>
-          <ul>
-            <li>Tauri + React</li><li>FastAPI</li><li>.NET</li><li>Canvas / WebGL</li>
-          </ul>
-        </div>
-        <div class="stack-group reveal">
-          <h3 class="stack-title mono">tooling</h3>
-          <ul>
-            <li>Git</li><li>Gradle</li><li>Docker</li><li>Vercel</li>
-          </ul>
-        </div>
-      </div>
+      </section>
+
     </div>
-  </section>
-
-  <!-- ───────────────────────── CONTACT ───────────────────────── -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <header class="section-head reveal">
-        <span class="section-num mono">04</span>
-        <h2 class="section-title">Contact</h2>
-      </header>
-
-      <p class="contact-lead reveal">
-        Building something and need hands that don't flinch? Send a line.
-      </p>
-
-      <a class="contact-mail reveal" href="mailto:Muhammadmahmudulalamakash@gmail.com">
-        Muhammadmahmudulalamakash@gmail.com
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      </a>
-
-      <a class="contact-phone reveal" href="https://wa.me/8801774593217" target="_blank" rel="noopener">
-        <span class="k mono">WhatsApp</span>
-        <span class="v">+880 1774 593217</span>
-      </a>
-
-      <ul class="socials reveal">
-        <li><a href="https://github.com/Muhammad-Akash" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="mailto:Muhammadmahmudulalamakash@gmail.com">Email</a></li>
-        <li><a href="https://wa.me/8801774593217" target="_blank" rel="noopener">WhatsApp</a></li>
-      </ul>
-    </div>
-  </section>
-
+  </div>
 </main>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <span class="mono">© <span id="year">2026</span> Muhammad Akash</span>
-    <span class="mono dim">Built by hand. Hosted free on GitHub Pages.</span>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© <span id="year">2026</span> Muhammad Akash</span>
+    <span class="footer-note">Built by hand. Hosted free on GitHub Pages.</span>
   </div>
 </footer>
 

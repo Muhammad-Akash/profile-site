@@ -1,6 +1,98 @@
 {
-  "updated": "2026-10",
+  "updated": "2026-11",
   "projects": [
+    {
+      "slug": "family-safe",
+      "name": "Family Safety",
+      "platform": "Android",
+      "year": "2026",
+      "status": "In development",
+      "summary": "Parental control suite — location trail, screen capture, and a supervised browser.",
+      "tags": ["Java", "Android", "Node.js"],
+      "stack": ["Java", "Android", "Node.js relay", "WebRTC", "Firebase", "OpenStreetMap"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "One app, two roles. A parent pairs with a child device and then sees where it is, what is on its screen, and who called or messaged — with a supervised browser and an onboarding wizard instead of a manual. No account sign-up; pairing is the whole setup."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "The map is the part worth pointing at. It is a custom View drawing Web-Mercator slippy tiles with an in-memory LRU cache of 96, pan and pinch-zoom handled by a ScaleGestureDetector, and no map SDK anywhere in the build — tiles are proxied through the app's own relay so the parent token is the only credential in play. The rest is the unglamorous half: pairing, role switching, and keeping two devices in step when either one sleeps."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "bloomly",
+      "name": "Bloomly",
+      "platform": "Android",
+      "year": "2026",
+      "status": "In development",
+      "summary": "Parenting companion that changes with the stage — preparing, expecting, or newborn.",
+      "tags": ["Kotlin", "Compose", "Python"],
+      "stack": ["Kotlin", "Jetpack Compose", "Room", "Python", "FAISS", "RAG"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "Fifteen screens that rearrange themselves around where a parent is on the timeline: a stage picker, a 90-day calendar, an offline Learn shelf, feeding and growth logs, CDC milestone checklists, medicine guidance, and an Ask screen that answers with citations."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Ask is retrieval over a corpus harvested from NHS, CDC and AAP pages and indexed with FAISS — and nothing in the answer is written by the model. Every guidance sentence comes from a page the harvester pulled, so a citation is a real source rather than a plausible-looking one. Most of the work was the pipeline behind that: chunking, routing, and evals for retrieval and answers that run before anything ships."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "itn-vpn",
+      "name": "ITN VPN",
+      "platform": "Android",
+      "year": "2026",
+      "status": "Shipped",
+      "summary": "WireGuard client for Android, packaged for Play submission.",
+      "tags": ["Kotlin", "Compose", "WireGuard"],
+      "stack": ["Kotlin", "Jetpack Compose", "WireGuard", "VpnService"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "A single screen: pick a server, connect, watch the tunnel state. Servers ship as a local JSON list, and the app runs Android's VpnService with the official WireGuard userspace tunnel rather than a homegrown protocol."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "The tunnel is the easy part. targetSdk 36, a signed AAB, a data-safety form, a VPN declaration and a privacy policy that has to load without a login — building the client is a weekend, getting it past review is the project."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
+    {
+      "slug": "meherpur-sheba",
+      "name": "Meherpur Sheba",
+      "platform": "Android",
+      "year": "2026",
+      "status": "Shipped",
+      "summary": "Client work — a district services directory, public app plus admin app.",
+      "tags": ["Kotlin", "Firebase", "Client work"],
+      "stack": ["Kotlin", "Android", "Firebase", "Firestore", "Cloud Functions"],
+      "cover": "",
+      "gallery": [],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "A directory of services for Meherpur district across nine sections — emergency, health, education, transport, business, home, community, religious, leisure. Every listing carries hours, area, phone and rating; one tap dials, and the detail sheet adds directions, sharing and saving."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Two apps over one Firebase project: the public app for readers, and an admin app that replaced the client's old PHP panel so content is edited on a phone instead of a server. Signed APK and AAB, Firestore and Storage rules, and a Cloud Function for push — handed over with a written guide rather than a repo and good luck."
+        }
+      ],
+      "links": { "repo": null, "demo": null }
+    },
     {
       "slug": "chorus",
       "name": "Chorus",

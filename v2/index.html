@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Muhammad Akash — Builds things that hold.</title>
+<meta name="description" content="Muhammad Akash builds apps, tools, and games. Android, desktop, and web — twenty-one projects." />
+<meta name="theme-color" content="#2f6bff" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Muhammad Akash — Builds things that hold." />
+<meta property="og:description" content="Android, desktop, and web. Twenty-one projects." />
+<meta property="og:url" content="https://muhammad-akash.github.io/profile-site/" />
+<meta property="og:image" content="https://muhammad-akash.github.io/profile-site/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://muhammad-akash.github.io/profile-site/og.png" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2304060b'/><text x='50' y='70' font-size='56' font-family='Arial Narrow,Arial' font-weight='900' text-anchor='middle' fill='%232f6bff'>M</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+
+<script>
+  (function (d) {
+    var h = d.documentElement;
+    h.classList.remove('no-js'); h.classList.add('js');
+    try {
+      if (sessionStorage.getItem('ma-intro') || matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('skip-intro');
+    } catch (e) { h.classList.add('skip-intro'); }
+  })(document);
+</script>
+</head>
+<body>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4.5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="m4.5 7 7.5 6 7.5-6"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2.5 4.5 13.5h6.5l-1 8 8.5-11h-6.5z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8.5 8-4.5 4 4.5 4M15.5 8l4.5 4-4.5 4"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m14.5 6-6 6 6 6"/></symbol>
+  </defs>
+</svg>
+
+<!-- intro -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="pl-core">
+    <div class="pl-emblem">
+      <svg class="pl-ring" viewBox="0 0 120 120"><circle class="pl-track" cx="60" cy="60" r="54"/><circle class="pl-fill" cx="60" cy="60" r="54" pathLength="100"/></svg>
+      <span class="pl-mark">M</span>
+    </div>
+    <div class="pl-count"><span id="pl-num">000</span><small>%</small></div>
+    <div class="pl-text"><span>Loading</span> · Portfolio</div>
+  </div>
+</div>
+
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+<a class="skip" href="#work">Skip to work</a>
+
+<!-- header -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Muhammad Akash, home">
+      <span class="brand-mark">
+        <span class="brand-initial">M</span>
+        <svg class="brand-ring" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22.5" pathLength="100"/></svg>
+      </span>
+      <span class="brand-word">MUHAMMAD AKASH<span class="brand-dot">.</span></span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main">
+      <a href="#about"><svg class="ico"><use href="#i-code"/></svg><span>About</span></a>
+      <a href="#work" aria-current="page"><svg class="ico"><use href="#i-grid"/></svg><span>Work</span></a>
+      <a href="#stack"><svg class="ico"><use href="#i-bolt"/></svg><span>Stack</span></a>
+      <a href="#contact"><svg class="ico"><use href="#i-mail"/></svg><span>Contact</span></a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-ghost btn-sm header-gh" href="https://github.com/Muhammad-Akash" target="_blank" rel="noopener">
+        <span class="btn-label"><span class="bl"><span>GitHub</span><span>GitHub</span></span></span>
+        <span class="btn-icon"><svg class="ico"><use href="#i-arrow"/></svg><svg class="ico"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="btn btn-primary" href="mailto:Muhammadmahmudulalamakash@gmail.com" data-magnetic>
+        <span class="btn-label"><span class="bl"><span>Get in touch</span><span>Get in touch</span></span></span>
+        <span class="btn-icon"><svg class="ico"><use href="#i-send"/></svg><svg class="ico"><use href="#i-send"/></svg></span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <nav class="mobile-nav" aria-label="Mobile">
+    <a href="#about" style="--i:0"><small>01</small>About</a>
+    <a href="#work" style="--i:1"><small>02</small>Work</a>
+    <a href="#stack" style="--i:2"><small>03</small>Stack</a>
+    <a href="#contact" style="--i:3"><small>04</small>Contact</a>
+  </nav>
+  <div class="mobile-foot" style="--i:4">
+    <a class="btn btn-primary" href="mailto:Muhammadmahmudulalamakash@gmail.com">
+      <span class="btn-label"><span class="bl"><span>Get in touch</span><span>Get in touch</span></span></span>
+      <span class="btn-icon"><svg class="ico"><use href="#i-send"/></svg><svg class="ico"><use href="#i-send"/></svg></span>
+    </a>
+    <p>Android · Desktop · Web · Games</p>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ============ HERO + WORK BOARD ============ -->
+<section class="lib-hero" id="work" aria-labelledby="hero-title">
+  <div class="lib-glow" aria-hidden="true"></div>
+
+  <div class="lib-intro">
+    <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Available for work — <span class="mono">2026</span></p>
+
+    <h1 class="hero-title" id="hero-title">
+      <span class="hl"><span class="hl-in" data-chars>MUHAMMAD</span></span>
+      <span class="hl"><span class="hl-in" data-chars>AKASH BUILDS</span></span>
+      <span class="hl"><span class="hl-in" data-chars>THINGS</span></span>
+      <span class="hl"><span class="hl-in"><span data-chars>THAT</span> <span class="rotator" id="rotator" data-words="HOLD.,SHIP.,LAST.,SCALE.">HOLD.</span></span></span>
+    </h1>
+
+    <p class="hero-description" data-hero style="--d:4">
+      Android apps, desktop tools, games, and the glue between them. Twenty-one
+      projects — most of them built because something small was annoying and nobody
+      else had fixed it.
+    </p>
+
+    <div class="lib-cta" data-hero style="--d:5">
+      <a class="btn btn-primary" href="#work-board" data-magnetic>
+        <span class="btn-label"><span class="bl"><span>Browse the work</span><span>Browse the work</span></span></span>
+        <span class="btn-icon"><svg class="ico"><use href="#i-down"/></svg><svg class="ico"><use href="#i-down"/></svg></span>
+      </a>
+      <a class="btn btn-ghost" href="#contact">
+        <span class="btn-label"><span class="bl"><span>Get in touch</span><span>Get in touch</span></span></span>
+        <span class="btn-icon"><svg class="ico"><use href="#i-mail"/></svg><svg class="ico"><use href="#i-mail"/></svg></span>
+      </a>
+    </div>
+
+    <ul class="hero-meta" data-hero style="--d:6" aria-label="Quick facts">
+      <li><span class="k mono">Based</span><span class="v">Bangladesh</span></li>
+      <li><span class="k mono">Focus</span><span class="v">Android · Desktop · Web</span></li>
+      <li><span class="k mono">Status</span><span class="v accent">Open to work</span></li>
+    </ul>
+  </div>
+
+  <div class="lib-board" id="work-board" data-hero style="--d:3">
+    <div class="lib-tools">
+      <label class="search" for="search">
+        <svg class="ico"><use href="#i-search"/></svg>
+        <input id="search" type="search" placeholder="Search projects…" aria-label="Search projects" autocomplete="off" spellcheck="false" />
+        <button class="search-clear" id="search-clear" type="button" aria-label="Clear search" hidden><svg class="ico"><use href="#i-close"/></svg></button>
+        <kbd>/</kbd>
+      </label>
+      <div class="segment" id="segment" role="group" aria-label="Filter by platform">
+        <span class="segment-ind" aria-hidden="true"></span>
+        <button type="button" class="is-active" data-filter="all">All</button>
+        <button type="button" data-filter="Android">Android</button>
+        <button type="button" data-filter="Desktop">Desktop</button>
+        <button type="button" data-filter="Web">Web</button>
+        <button type="button" data-filter="Game">Game</button>
+        <button type="button" data-filter="AI">AI</button>
+        <button type="button" data-filter="Tools">Tools</button>
+      </div>
+    </div>
+
+    <div class="lib-board-head">
+      <span id="result-count" class="result-count" role="status">21 projects</span>
+      <a class="lib-how" href="#about">How I work<svg class="ico"><use href="#i-arrow"/></svg></a>
+    </div>
+
+    <div class="board-scroll">
+      <div id="pack-grid" class="pack-grid">
+
+        <a class="card" href="project.html?p=family-safe" data-platform="Android" data-name="Family Safety Parental Control Java Android Node.js">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">FS</span>
+          <span class="card-top"><span class="mono">001</span><span class="mono">Android</span></span>
+          <span class="card-body">
+            <span class="card-title">Family Safety</span>
+            <span class="card-desc">Parental control suite — location trail, screen capture, and a supervised browser.</span>
+          </span>
+          <span class="card-tags"><span>Java</span><span>Android</span><span>Node.js</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=bloomly" data-platform="Android" data-name="Bloomly Kotlin Compose Python RAG">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">BL</span>
+          <span class="card-top"><span class="mono">002</span><span class="mono">Android</span></span>
+          <span class="card-body">
+            <span class="card-title">Bloomly</span>
+            <span class="card-desc">Parenting companion that changes with the stage — preparing, expecting, or newborn.</span>
+          </span>
+          <span class="card-tags"><span>Kotlin</span><span>Compose</span><span>Python</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=itn-vpn" data-platform="Android" data-name="ITN VPN WireGuard Kotlin Compose">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">IT</span>
+          <span class="card-top"><span class="mono">003</span><span class="mono">Android</span></span>
+          <span class="card-body">
+            <span class="card-title">ITN VPN</span>
+            <span class="card-desc">WireGuard client for Android, packaged for Play submission.</span>
+          </span>
+          <span class="card-tags"><span>Kotlin</span><span>Compose</span><span>WireGuard</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=meherpur-sheba" data-platform="Android" data-name="Meherpur Sheba Kotlin Firebase Client work">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">MS</span>
+          <span class="card-top"><span class="mono">004</span><span class="mono">Android</span></span>
+          <span class="card-body">
+            <span class="card-title">Meherpur Sheba</span>
+            <span class="card-desc">Client work — a district services directory, public app plus admin app.</span>
+          </span>
+          <span class="card-tags"><span>Kotlin</span><span>Firebase</span><span>Client work</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=chorus" data-platform="AI" data-name="Chorus Tauri React Rust">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">CH</span>
+          <span class="card-top"><span class="mono">005</span><span class="mono">AI</span></span>
+          <span class="card-body">
+            <span class="card-title">Chorus</span>
+            <span class="card-desc">Pools RAM and VRAM across machines on a LAN to run one large model.</span>
+          </span>
+          <span class="card-tags"><span>Tauri</span><span>React</span><span>Rust</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=ai-imam" data-platform="Android" data-name="Ai Imam Android Python AI">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">AI</span>
+          <span class="card-top"><span class="mono">006</span><span class="mono">Android</span></span>
+          <span class="card-body">
+            <span class="card-title">Ai Imam</span>
+            <span class="card-desc">Islamic AI assistant — Android client over a Python backend.</span>
+          </span>
+          <span class="card-tags"><span>Android</span><span>Python</span><span>AI</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=loadshedding-alert" data-platform="Web" data-name="LoadShedding Alert FastAPI Python Docker">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">LS</span>
+          <span class="card-top"><span class="mono">007</span><span class="mono">Web</span></span>
+          <span class="card-body">
+            <span class="card-title">LoadShedding Alert</span>
+            <span class="card-desc">Local-first power-cut pre-alerts, built for Bangladesh.</span>
+          </span>
+          <span class="card-tags"><span>FastAPI</span><span>Python</span><span>Docker</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=automated-chatbot" data-platform="AI" data-name="Automated Chatbot Python AI Bots">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">AC</span>
+          <span class="card-top"><span class="mono">008</span><span class="mono">AI</span></span>
+          <span class="card-body">
+            <span class="card-title">Automated Chatbot</span>
+            <span class="card-desc">Custom AI chatbot answering on Messenger and WhatsApp.</span>
+          </span>
+          <span class="card-tags"><span>Python</span><span>AI</span><span>Bots</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=my-masjid-azan" data-platform="Android" data-name="My Masjid Azan Android Widget Kotlin">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">MA</span>
+          <span class="card-top"><span class="mono">009</span><span class="mono">Android</span></span>
+          <span class="card-body">
+            <span class="card-title">My Masjid Azan</span>
+            <span class="card-desc">Prayer times with a home-screen widget that resizes to any size.</span>
+          </span>
+          <span class="card-tags"><span>Android</span><span>Widget</span><span>Kotlin</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=pc-controller" data-platform="Desktop" data-name="PC Controller Python Android LAN">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">PC</span>
+          <span class="card-top"><span class="mono">010</span><span class="mono">Desktop</span></span>
+          <span class="card-body">
+            <span class="card-title">PC Controller</span>
+            <span class="card-desc">Drive a desktop from a phone — Python server, Android client.</span>
+          </span>
+          <span class="card-tags"><span>Python</span><span>Android</span><span>LAN</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=youtube-fastforward" data-platform="Web" data-name="YouTube FastForward Chrome JavaScript Extension">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">YF</span>
+          <span class="card-top"><span class="mono">011</span><span class="mono">Browser</span></span>
+          <span class="card-body">
+            <span class="card-title">YouTube FastForward</span>
+            <span class="card-desc">Playback speed plus measurement-driven volume levelling.</span>
+          </span>
+          <span class="card-tags"><span>Chrome</span><span>JavaScript</span><span>Extension</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=tuee" data-platform="Android" data-name="Tuee Android Kotlin Native">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">TU</span>
+          <span class="card-top"><span class="mono">012</span><span class="mono">Android</span></span>
+          <span class="card-body">
+            <span class="card-title">Tuee</span>
+            <span class="card-desc">Home-cooked meals — native Android app.</span>
+          </span>
+          <span class="card-tags"><span>Android</span><span>Kotlin</span><span>Native</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=portable-ai-assistant" data-platform="Android" data-name="Portable AI Assistant Android Python API">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">PA</span>
+          <span class="card-top"><span class="mono">013</span><span class="mono">Android</span></span>
+          <span class="card-body">
+            <span class="card-title">Portable AI Assistant</span>
+            <span class="card-desc">Pocket assistant wired to a hosted LLM API.</span>
+          </span>
+          <span class="card-tags"><span>Android</span><span>Python</span><span>API</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=no-ads-qibla-compass" data-platform="Android" data-name="No Ads Qibla Compass Android Kotlin Sensors">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">QC</span>
+          <span class="card-top"><span class="mono">014</span><span class="mono">Android</span></span>
+          <span class="card-body">
+            <span class="card-title">No Ads Qibla Compass</span>
+            <span class="card-desc">Qibla direction from GPS and sensors, no advertising.</span>
+          </span>
+          <span class="card-tags"><span>Android</span><span>Kotlin</span><span>Sensors</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=calling-bell-app" data-platform="Android" data-name="Calling Bell App Android Kotlin LAN">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">CB</span>
+          <span class="card-top"><span class="mono">015</span><span class="mono">Android</span></span>
+          <span class="card-body">
+            <span class="card-title">Calling Bell App</span>
+            <span class="card-desc">Two phones on one Wi-Fi act as doorbell and receiver.</span>
+          </span>
+          <span class="card-tags"><span>Android</span><span>Kotlin</span><span>LAN</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=shortloop" data-platform="Tools" data-name="ShortLoop Python Automation API">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">SL</span>
+          <span class="card-top"><span class="mono">016</span><span class="mono">Tools</span></span>
+          <span class="card-body">
+            <span class="card-title">ShortLoop</span>
+            <span class="card-desc">Pipeline for producing short-form video, end to end.</span>
+          </span>
+          <span class="card-tags"><span>Python</span><span>Automation</span><span>API</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=wattscope" data-platform="Desktop" data-name="WattScope C# .NET Desktop">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">WS</span>
+          <span class="card-top"><span class="mono">017</span><span class="mono">Desktop</span></span>
+          <span class="card-body">
+            <span class="card-title">WattScope</span>
+            <span class="card-desc">Power-supply wattage calculator for PC builds.</span>
+          </span>
+          <span class="card-tags"><span>C#</span><span>.NET</span><span>Desktop</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=volume-control-pro" data-platform="Android" data-name="Volume Control Pro Android Kotlin Audio">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">VC</span>
+          <span class="card-top"><span class="mono">018</span><span class="mono">Android</span></span>
+          <span class="card-body">
+            <span class="card-title">Volume Control Pro</span>
+            <span class="card-desc">Fine-grained volume control the stock panel never gave you.</span>
+          </span>
+          <span class="card-tags"><span>Android</span><span>Kotlin</span><span>Audio</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=neon-breaker" data-platform="Game" data-name="Neon Breaker JavaScript Canvas Game">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">NB</span>
+          <span class="card-top"><span class="mono">019</span><span class="mono">Game</span></span>
+          <span class="card-body">
+            <span class="card-title">Neon Breaker</span>
+            <span class="card-desc">Offline brick breaker — one level, three lives, no install.</span>
+          </span>
+          <span class="card-tags"><span>JavaScript</span><span>Canvas</span><span>Game</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=dx-ball-antigravity" data-platform="Game" data-name="DX Ball Antigravity JavaScript Canvas Game">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">DX</span>
+          <span class="card-top"><span class="mono">020</span><span class="mono">Game</span></span>
+          <span class="card-body">
+            <span class="card-title">DX Ball Antigravity</span>
+            <span class="card-desc">DX Ball variant with dynamic ball-speed scaling.</span>
+          </span>
+          <span class="card-tags"><span>JavaScript</span><span>Canvas</span><span>Game</span></span>
+        </a>
+
+        <a class="card" href="project.html?p=flappy-bird" data-platform="Game" data-name="Flappy Bird HTML Canvas Game">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-mark" aria-hidden="true">FB</span>
+          <span class="card-top"><span class="mono">021</span><span class="mono">Game</span></span>
+          <span class="card-body">
+            <span class="card-title">Flappy Bird</span>
+            <span class="card-desc">Clone in a single HTML file, open and play.</span>
+          </span>
+          <span class="card-tags"><span>HTML</span><span>Canvas</span><span>Game</span></span>
+        </a>
+
+      </div>
+
+      <div id="empty-state" class="empty" hidden>
+        <div class="empty-glyph" aria-hidden="true"><svg class="ico"><use href="#i-search"/></svg></div>
+        <h3>Nothing matches</h3>
+        <p>Try a shorter search, or clear the filter.</p>
+        <button id="reset-search" class="btn btn-ghost btn-sm" type="button">
+          <span class="btn-label"><span class="bl"><span>Clear filters</span><span>Clear filters</span></span></span>
+          <span class="btn-icon"><svg class="ico"><use href="#i-close"/></svg><svg class="ico"><use href="#i-close"/></svg></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="board-foot">
+      <span class="mono">Every card opens a full case page</span>
+      <a class="lib-how" href="https://github.com/Muhammad-Akash" target="_blank" rel="noopener">More on GitHub<svg class="ico"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / HOW I WORK ============ -->
+<section id="about" class="section how" aria-labelledby="how-title">
+  <div class="story">
+    <div class="story-copy">
+      <p class="eyebrow" data-reveal>The short version</p>
+      <h2 id="how-title" data-split>FIND THE ITCH.<br><span class="soft">SHIP THE FIX.</span></h2>
+      <p class="lede" data-reveal style="--d:2">Most of what's here started as a personal annoyance.<br>Then it got out of hand, in a good way.</p>
+
+      <div class="story-steps-wrap">
+        <span class="story-rail" aria-hidden="true"><span></span></span>
+        <ol class="story-steps" id="story-steps">
+          <li class="story-step is-active" data-step="1">
+            <span class="step-no">01</span>
+            <h3>Notice the annoyance.</h3>
+            <p>A store app that can't do the one thing it's for. A volume slider with five steps. A model too big for one machine.</p>
+          </li>
+          <li class="story-step" data-step="2">
+            <span class="step-no">02</span>
+            <h3>Build the smallest fix that works.</h3>
+            <p>No framework ceremony. One page, one binary, one APK — whatever gets it into your hands fastest.</p>
+          </li>
+          <li class="story-step" data-step="3">
+            <span class="step-no">03</span>
+            <h3>Keep it alive.</h3>
+            <p>Reconnects, drift, edge cases, and the second version nobody asked for but everybody wanted.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="story-visual">
+      <div class="scene" id="scene" data-step="1" aria-hidden="true">
+        <div class="scene-bar">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="scene-url" translate="no">akash://<b id="scene-label">notice</b></span>
+          <span class="scene-count"><b id="scene-num">01</b>/03</span>
+        </div>
+        <div class="scene-stage">
+          <div class="stage stage-1">
+            <div class="itch-list">
+              <span class="itch"><svg class="ico"><use href="#i-close"/></svg>Ad-riddled store app</span>
+              <span class="itch"><svg class="ico"><use href="#i-close"/></svg>Volume with 5 steps</span>
+              <span class="itch"><svg class="ico"><use href="#i-close"/></svg>Model won't fit in RAM</span>
+              <span class="itch is-fixed"><svg class="ico"><use href="#i-check"/></svg>Qibla app with ads</span>
+            </div>
+            <div class="fake-cursor"><svg class="ico"><use href="#i-arrow"/></svg></div>
+          </div>
+          <div class="stage stage-2">
+            <div class="term">
+              <div class="term-line"><span class="term-prompt">$</span> build --target android</div>
+              <div class="term-line dim">› kotlin compile<span class="term-ok">ok</span></div>
+              <div class="term-line dim">› package .apk<span class="term-ok">ok</span></div>
+              <div class="term-line dim">› sign<span class="term-ok">ok</span></div>
+              <div class="term-line"><span class="term-prompt">✓</span> shipped in 12.4s</div>
+            </div>
+          </div>
+          <div class="stage stage-3">
+            <div class="ship-grid">
+              <span class="ship-chip">reconnect</span>
+              <span class="ship-chip">drift</span>
+              <span class="ship-chip">offline</span>
+              <span class="ship-chip">sensors</span>
+              <span class="ship-chip is-on">v2</span>
+            </div>
+            <div class="chatbar">
+              <span class="chat-clip"><svg class="ico"><use href="#i-code"/></svg></span>
+              <span class="chat-attach" translate="no">still working</span>
+              <span class="chat-ph">Keep it alive…</span>
+              <span class="chat-send"><svg class="ico"><use href="#i-send"/></svg></span>
+            </div>
+          </div>
+        </div>
+        <p class="scene-caption">Twenty-one projects, five platforms, one habit.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="good-to-know" data-reveal>
+    <span>Good to know</span>
+    <p>Every project has its own page — what it does, what it's built with, and the parts that were hard. Nothing is generated at build time: one template, one JSON file.</p>
+  </div>
+</section>
+
+<!-- ============ STACK ============ -->
+<section id="stack" class="section stack-sec" aria-labelledby="stack-title">
+  <div class="faq-head">
+    <p class="eyebrow" data-reveal>The kit</p>
+    <h2 id="stack-title" data-split>TOOLS OF<br><span class="soft">THE TRADE.</span></h2>
+    <p class="lede" data-reveal style="--d:2">Chosen per project, not per fashion.</p>
+  </div>
+
+  <div class="stack-grid">
+    <div class="stack-panel" data-reveal style="--d:0">
+      <h3 class="mono">languages</h3>
+      <ul><li>Kotlin / Java</li><li>Python</li><li>JavaScript</li><li>C#</li><li>Rust</li></ul>
+    </div>
+    <div class="stack-panel" data-reveal style="--d:1">
+      <h3 class="mono">platforms</h3>
+      <ul><li>Android</li><li>Windows desktop</li><li>Web / PWA</li><li>Browser extensions</li></ul>
+    </div>
+    <div class="stack-panel" data-reveal style="--d:2">
+      <h3 class="mono">built with</h3>
+      <ul><li>Tauri + React</li><li>FastAPI</li><li>.NET</li><li>Canvas / WebGL</li></ul>
+    </div>
+    <div class="stack-panel" data-reveal style="--d:3">
+      <h3 class="mono">tooling</h3>
+      <ul><li>Git</li><li>Gradle</li><li>Docker</li><li>Vercel</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="closing" id="contact" aria-labelledby="closing-title">
+  <div class="closing-panel" data-reveal>
+    <div class="closing-copy">
+      <p class="eyebrow">Contact</p>
+      <h2 id="closing-title" data-split>BUILD SOMETHING<br><span class="soft">THAT LASTS.</span></h2>
+      <p class="lede">Building something and need hands that don't flinch? Send a line.</p>
+      <div class="closing-actions">
+        <a href="mailto:Muhammadmahmudulalamakash@gmail.com" class="btn btn-primary" data-magnetic>
+          <span class="btn-label"><span class="bl"><span>Muhammadmahmudulalamakash@gmail.com</span><span>Muhammadmahmudulalamakash@gmail.com</span></span></span>
+          <span class="btn-icon"><svg class="ico"><use href="#i-mail"/></svg><svg class="ico"><use href="#i-mail"/></svg></span>
+        </a>
+        <a href="https://wa.me/8801774593217" class="btn btn-ghost" target="_blank" rel="noopener" data-magnetic>
+          <span class="btn-label"><span class="bl"><span>WhatsApp</span><span>WhatsApp</span></span></span>
+          <span class="btn-icon"><svg class="ico"><use href="#i-arrow"/></svg><svg class="ico"><use href="#i-arrow"/></svg></span>
+        </a>
+      </div>
+      <p class="closing-note mono">+880 1774 593217 · Bangladesh</p>
+    </div>
+    <div class="closing-art" aria-hidden="true"><span>M</span></div>
+  </div>
+</section>
+</main>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a class="brand" href="#top">
+        <span class="brand-mark"><span class="brand-initial">M</span></span>
+        <span class="brand-word">MUHAMMAD AKASH<span class="brand-dot">.</span></span>
+      </a>
+      <p>Android, desktop, and web. Built by hand.</p>
+      <div class="footer-social">
+        <a class="mini-btn" href="https://github.com/Muhammad-Akash" target="_blank" rel="noopener"><svg class="ico"><use href="#i-code"/></svg><span>GitHub</span></a>
+        <a class="mini-btn" href="mailto:Muhammadmahmudulalamakash@gmail.com"><svg class="ico"><use href="#i-mail"/></svg><span>Email</span></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="#about">About</a><a href="#work">Work</a><a href="#stack">Stack</a><a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Platforms</h4>
+      <a href="#work">Android</a><a href="#work">Desktop</a><a href="#work">Web</a><a href="#work">Games</a><a href="#work">Tools</a>
+    </div>
+
+    <div class="footer-col footer-keys">
+      <h4>Shortcuts</h4>
+      <span><kbd>/</kbd>Search work</span>
+      <span><kbd>Esc</kbd>Close menu</span>
+    </div>
+  </div>
+
+  <div class="footer-word" aria-hidden="true"><span>MUHAMMAD AKASH</span></div>
+
+  <div class="footer-bottom">
+    <span>© <span id="year">2026</span> Muhammad Akash</span>
+    <span class="footer-legal">Built by hand. Hosted free on GitHub Pages.</span>
+    <a class="to-top" href="#top" aria-label="Back to top">
+      <svg class="to-top-ring" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20"/><circle class="to-top-fill" cx="22" cy="22" r="20" pathLength="100"/></svg>
+      <svg class="ico"><use href="#i-send"/></svg>
+    </a>
+  </div>
+</footer>
+
+<noscript><p class="noscript">Enable JavaScript to search and filter the work grid.</p></noscript>
+<script src="script.js" defer></script>
+</body>
+</html>
