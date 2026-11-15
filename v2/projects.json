@@ -53,15 +53,15 @@
       "platform": "Android",
       "year": "2026",
       "status": "Shipped",
-      "summary": "WireGuard client for Android, packaged for Play submission.",
-      "tags": ["Kotlin", "Compose", "WireGuard"],
-      "stack": ["Kotlin", "Jetpack Compose", "WireGuard", "VpnService"],
+      "summary": "VPN client for Android, packaged for Play submission.",
+      "tags": ["Kotlin", "Compose", "VpnService"],
+      "stack": ["Kotlin", "Jetpack Compose", "VpnService", "Userspace tunnel"],
       "cover": "",
       "gallery": [],
       "body": [
         {
           "h": "What it does",
-          "p": "A single screen: pick a server, connect, watch the tunnel state. Servers ship as a local JSON list, and the app runs Android's VpnService with the official WireGuard userspace tunnel rather than a homegrown protocol."
+          "p": "A single screen: pick a server, connect, watch the tunnel state. Servers ship as a local JSON list, and the app runs Android's VpnService with a mature userspace tunnel rather than a homegrown protocol."
         },
         {
           "h": "Why it's interesting",

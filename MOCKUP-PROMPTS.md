@@ -11,6 +11,13 @@ Use them two ways:
   generator. Text inside generated images is usually garbled, so treat output
   as art direction, not final UI.
 
+> **Status — these are no longer needed for the four apps below.** Real
+> screenshots were captured from the devices and are already wired into
+> `projects.json` (`img/family-safe/`, `img/bloomly/`, `img/itn-vpn/`,
+> `img/meherpur-sheba/`). Keep this file as the written spec of what each app
+> actually contains, or reuse the art direction for the 17 projects that still
+> have no imagery.
+
 ---
 
 ## Art direction (shared)
@@ -131,7 +138,7 @@ screen that answers with real citations.
 
 ## 3 · ITN VPN
 
-**What it actually is:** a single-screen WireGuard client. Pick a server,
+**What it actually is:** a single-screen VPN client. Pick a server,
 connect, watch the tunnel state. Servers ship as a local JSON list.
 
 **Palette:** deep navy `#0d1420`, electric blue `#3d7dff`, mint `#47e6a1`

@@ -10,8 +10,15 @@
       "summary": "Parental control suite — location trail, screen capture, and a supervised browser.",
       "tags": ["Java", "Android", "Node.js"],
       "stack": ["Java", "Android", "Node.js relay", "WebRTC", "Firebase", "OpenStreetMap"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/family-safe/cover.webp",
+      "gallery": [
+        { "src": "img/family-safe/01-dashboard.webp", "alt": "Device dashboard", "caption": "Dashboard — screen time today, remote actions, and the limits below" },
+        { "src": "img/family-safe/02-location.webp", "alt": "Location", "caption": "Location — live trail on hand-drawn OpenStreetMap tiles" },
+        { "src": "img/family-safe/03-screen-time.webp", "alt": "Screen time", "caption": "Screen time — daily report split by app and category" },
+        { "src": "img/family-safe/05-app-management.webp", "alt": "App management", "caption": "App management — per-app limits, blocking and always-allowed" },
+        { "src": "img/family-safe/06-calls-sms.webp", "alt": "Calls and SMS", "caption": "Calls and SMS — every call and message logged from the child phone" },
+        { "src": "img/family-safe/04-family.webp", "alt": "Family", "caption": "Family — the devices bound to one parent" }
+      ],
       "body": [
         {
           "h": "What it does",
@@ -33,8 +40,15 @@
       "summary": "Parenting companion that changes with the stage — preparing, expecting, or newborn.",
       "tags": ["Kotlin", "Compose", "Python"],
       "stack": ["Kotlin", "Jetpack Compose", "Room", "Python", "FAISS", "RAG"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/bloomly/cover.webp",
+      "gallery": [
+        { "src": "img/bloomly/01-home.webp", "alt": "Home", "caption": "Home — the day, the week, and what is due next" },
+        { "src": "img/bloomly/02-ask.webp", "alt": "Ask", "caption": "Ask — an answer written only from sources, numbered as it goes" },
+        { "src": "img/bloomly/03-learn.webp", "alt": "Learn", "caption": "Learn — 133 articles, filtered to the current stage" },
+        { "src": "img/bloomly/04-article.webp", "alt": "Article", "caption": "Article — illustrated, NHS-sourced, sectioned for scanning" },
+        { "src": "img/bloomly/05-plans.webp", "alt": "Plans", "caption": "Plans — family meals for the first week home" },
+        { "src": "img/bloomly/06-profile.webp", "alt": "Profile", "caption": "Profile — stage, family and settings" }
+      ],
       "body": [
         {
           "h": "What it does",
@@ -53,15 +67,18 @@
       "platform": "Android",
       "year": "2026",
       "status": "Shipped",
-      "summary": "WireGuard client for Android, packaged for Play submission.",
-      "tags": ["Kotlin", "Compose", "WireGuard"],
-      "stack": ["Kotlin", "Jetpack Compose", "WireGuard", "VpnService"],
-      "cover": "",
-      "gallery": [],
+      "summary": "VPN client for Android, packaged for Play submission.",
+      "tags": ["Kotlin", "Compose", "VpnService"],
+      "stack": ["Kotlin", "Jetpack Compose", "VpnService", "Userspace tunnel"],
+      "cover": "img/itn-vpn/cover.webp",
+      "gallery": [
+        { "src": "img/itn-vpn/01-disconnected.webp", "alt": "Disconnected", "caption": "Disconnected — one button, no menus, nothing to configure" },
+        { "src": "img/itn-vpn/02-connected.webp", "alt": "Connected", "caption": "Connected — server, tunnel state, and what moved" }
+      ],
       "body": [
         {
           "h": "What it does",
-          "p": "A single screen: pick a server, connect, watch the tunnel state. Servers ship as a local JSON list, and the app runs Android's VpnService with the official WireGuard userspace tunnel rather than a homegrown protocol."
+          "p": "A single screen: pick a server, connect, watch the tunnel state. Servers ship as a local JSON list, and the app runs Android's VpnService with a mature userspace tunnel rather than a homegrown protocol."
         },
         {
           "h": "Why it's interesting",
@@ -79,8 +96,14 @@
       "summary": "Client work — a district services directory, public app plus admin app.",
       "tags": ["Kotlin", "Firebase", "Client work"],
       "stack": ["Kotlin", "Android", "Firebase", "Firestore", "Cloud Functions"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/meherpur-sheba/cover.webp",
+      "gallery": [
+        { "src": "img/meherpur-sheba/01-home.webp", "alt": "Home", "caption": "Home — notice ticker, helpline, and the nine sections" },
+        { "src": "img/meherpur-sheba/02-home-sections.webp", "alt": "Sections", "caption": "Sections — emergency and safety at a glance" },
+        { "src": "img/meherpur-sheba/03-categories.webp", "alt": "Categories", "caption": "Categories — 50 categories across nine sections" },
+        { "src": "img/meherpur-sheba/04-category-list.webp", "alt": "Category", "caption": "Category — 78 doctors with hours and one-tap call" },
+        { "src": "img/meherpur-sheba/05-detail.webp", "alt": "Detail", "caption": "Detail sheet — hours, number, call, map and share" }
+      ],
       "body": [
         {
           "h": "What it does",

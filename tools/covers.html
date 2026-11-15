@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Cover generator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&family=Lato:wght@400;700&display=swap" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 1600px;
+    height: 650px;
+    overflow: hidden;
+    background: #f6f5f1;
+    font-family: 'Newsreader', Georgia, serif;
+    color: #353534;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .cover {
+    position: relative;
+    width: 1600px;
+    height: 650px;
+    overflow: hidden;
+    display: none;
+    background:
+      radial-gradient(900px 620px at 86% 42%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 68%),
+      #f6f5f1;
+  }
+  .cover.on { display: block; }
+
+  /* faint paper grid */
+  .cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(53,53,52,.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(53,53,52,.045) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: linear-gradient(to right, black, transparent 62%);
+    -webkit-mask-image: linear-gradient(to right, black, transparent 62%);
+  }
+
+  .copy {
+    position: absolute;
+    left: 84px;
+    top: 0;
+    height: 650px;
+    width: 820px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+    z-index: 2;
+  }
+
+  .kicker {
+    font-family: 'Lato', system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .kicker::before {
+    content: "";
+    width: 34px;
+    height: 2px;
+    background: var(--accent-ink);
+    opacity: .55;
+  }
+
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: .96;
+    letter-spacing: -.022em;
+    color: var(--title, #353534);
+  }
+
+  p.sub {
+    font-size: 27px;
+    line-height: 1.42;
+    color: #6b6863;
+    max-width: 690px;
+  }
+
+  .meta {
+    font-family: 'Lato', system-ui, sans-serif;
+    font-size: 14px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #8e8f94;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 6px;
+  }
+  .meta span { padding: 7px 13px; border: 1px solid rgba(53,53,52,.16); border-radius: 100px; }
+
+  /* ---- device ---- */
+  .device {
+    position: absolute;
+    right: 96px;
+    top: 78px;
+    width: 246px;
+    height: 552px;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 3;
+    background: #000;
+    box-shadow:
+      0 0 0 7px #1d1c1a,
+      0 0 0 8px rgba(255,255,255,.14),
+      0 34px 60px -18px rgba(28,27,24,.42),
+      0 12px 24px -8px rgba(28,27,24,.28);
+  }
+  .device img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .device.back {
+    right: 330px;
+    top: 150px;
+    width: 200px;
+    height: 450px;
+    opacity: .96;
+    z-index: 1;
+    box-shadow:
+      0 0 0 6px #1d1c1a,
+      0 24px 44px -16px rgba(28,27,24,.34);
+  }
+
+  /* ---- dark variant (VPN) ---- */
+  .cover.dark {
+    background:
+      radial-gradient(760px 560px at 84% 46%, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%),
+      #0d1420;
+  }
+  .cover.dark::before { display: none; }
+  .cover.dark h1 { color: #eef2f8; }
+  .cover.dark p.sub { color: #97a3b6; }
+  .cover.dark .kicker { color: var(--accent-ink); }
+  .cover.dark .meta { color: #7d8798; }
+  .cover.dark .meta span { border-color: rgba(238,242,248,.18); }
+</style>
+</head>
+<body>
+
+<!-- 1 · Family Safety -->
+<section class="cover" id="family-safety"
+         style="--accent:#2f6bff; --accent-ink:#2f6bff;">
+  <div class="copy">
+    <div class="kicker">Android · Parent + child</div>
+    <h1>Family<br />Safety</h1>
+    <p class="sub">Live location, screen time and app limits across two phones, paired by QR.</p>
+    <div class="meta"><span>Kotlin</span><span>OpenStreetMap</span><span>In development</span></div>
+  </div>
+  <div class="device back"><img src="../img/family-safe/05-app-management.webp" alt="" /></div>
+  <div class="device"><img src="../img/family-safe/01-dashboard.webp" alt="" /></div>
+</section>
+
+<!-- 2 · Bloomly -->
+<section class="cover" id="bloomly"
+         style="--accent:#5f8a4e; --accent-ink:#4a7a3a;">
+  <div class="copy">
+    <div class="kicker">Android · Parenting companion</div>
+    <h1>Bloomly</h1>
+    <p class="sub">A stage-aware guide for preparing, expecting and newborn — with answers that cite what they used.</p>
+    <div class="meta"><span>Kotlin</span><span>Compose</span><span>In development</span></div>
+  </div>
+  <div class="device back"><img src="../img/bloomly/02-ask.webp" alt="" /></div>
+  <div class="device"><img src="../img/bloomly/01-home.webp" alt="" /></div>
+</section>
+
+<!-- 3 · ITN VPN -->
+<section class="cover dark" id="itn-vpn"
+         style="--accent:#47e6a1; --accent-ink:#47e6a1;">
+  <div class="copy">
+    <div class="kicker">Android · VPN client</div>
+    <h1>ITN VPN</h1>
+    <p class="sub">One tap to a private tunnel. Pick a server, watch the state, see what moved.</p>
+    <div class="meta"><span>Kotlin</span><span>VpnService</span><span>Shipped</span></div>
+  </div>
+  <div class="device back"><img src="../img/itn-vpn/02-connected.webp" alt="" /></div>
+  <div class="device"><img src="../img/itn-vpn/01-disconnected.webp" alt="" /></div>
+</section>
+
+<!-- 4 · Meherpur Sheba -->
+<section class="cover" id="meherpur-sheba"
+         style="--accent:#1f7a4d; --accent-ink:#1f7a4d;">
+  <div class="copy">
+    <div class="kicker">Android · Client work</div>
+    <h1>Meherpur<br />Sheba</h1>
+    <p class="sub">A district directory for Meherpur — nine sections, 78 doctors, one tap to call.</p>
+    <div class="meta"><span>Kotlin</span><span>Firebase</span><span>Client</span></div>
+  </div>
+  <div class="device back"><img src="../img/meherpur-sheba/04-category-list.webp" alt="" /></div>
+  <div class="device"><img src="../img/meherpur-sheba/01-home.webp" alt="" /></div>
+</section>
+
+<script>
+  const want = new URLSearchParams(location.search).get('p');
+  const el = document.getElementById(want) || document.querySelector('.cover');
+  if (el) el.classList.add('on');
+</script>
+</body>
+</html>

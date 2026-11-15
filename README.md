@@ -67,9 +67,9 @@ Two places, both required:
   "summary": "One line — what it is, not how.",
   "tags": ["Kotlin", "Android"],
   "stack": ["Kotlin", "Android", "Room"],
-  "cover": "img/my-project/cover.png",
+  "cover": "img/my-project/cover.webp",
   "gallery": [
-    { "src": "img/my-project/1.png", "alt": "Home screen", "caption": "Home" }
+    { "src": "img/my-project/1.webp", "alt": "Home screen", "caption": "Home" }
   ],
   "body": [
     { "h": "What it does", "p": "A paragraph." },
@@ -104,11 +104,43 @@ Field notes:
 
 ## Images
 
-Put screenshots in `img/<slug>/` and reference them with a relative path
-(`img/chorus/1.png`). Nothing else needs to change.
+Screenshots live in `img/<slug>/` and are referenced by relative path.
+
+| File | Used by | Size |
+|---|---|---|
+| `img/<slug>/cover.webp` | Project page hero | 1600 × 650 |
+| `img/<slug>/card.webp` | Home grid tile | 800 × 800, transparent |
+| `img/<slug>/NN-*.webp` | Project page gallery | 810 × 1818 (phone) |
+
+Images are WebP, not PNG — the 28 files came to 9.3 MB as PNG and 1.6 MB as
+WebP with no visible difference.
+
+Four projects have real screens captured from the devices — Family Safety,
+Bloomly, ITN VPN and Meherpur Sheba. The other 17 still render a generated
+initials tile; drop a `cover.webp` in `img/<slug>/` and add it to that
+project's `"cover"` field to replace it.
+
+`card.webp` is transparent on purpose: the tile background comes from the
+`--tint` on the card, so it adapts to light and dark automatically.
+
+### Regenerating covers and cards
+
+`tools/covers.html` and `tools/cards.html` are the sources for those images —
+real HTML rendered in Chrome, so they use the site's own Fraunces type and
+palette rather than a lookalike font.
+
+```powershell
+python -m http.server 8000
+# then screenshot each one, e.g.
+#   http://localhost:8000/tools/covers.html?p=bloomly  -> img/bloomly/cover.webp
+#   http://localhost:8000/tools/cards.html?p=bloomly   -> img/bloomly/card.webp
+```
+
+Edit the copy in those two files, re-shoot, and the site picks up the new
+images. `card.webp` must be captured with a transparent background.
 
 `MOCKUP-PROMPTS.md` has design briefs and generation prompts for the four most
-recent apps.
+recent apps — useful now mainly as a written spec of each screen.
 
 ## Deploy
 
