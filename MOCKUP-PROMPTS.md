@@ -36,7 +36,7 @@ constant across all four apps; only the app's own accent colour changes.
 
 | Use | Ratio | Size |
 |---|---|---|
-| Project cover (`cover`) | 16 : 6.5 | 1600 × 650 |
+| Project cover (`cover`) | 16 : 6.5 | 2400 × 975 (1.5× of 1600 × 650) |
 | Gallery screens (`gallery`) | 9 : 19.5 | 1080 × 2340 |
 | Card art (home grid) | 1 : 1 | 800 × 800 |
 

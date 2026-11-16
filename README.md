@@ -108,7 +108,7 @@ Screenshots live in `img/<slug>/` and are referenced by relative path.
 
 | File | Used by | Size |
 |---|---|---|
-| `img/<slug>/cover.webp` | Project page hero | 1600 × 650 |
+| `img/<slug>/cover.webp` | Project page hero | 2400 × 975 (1.5× of 1600 × 650) |
 | `img/<slug>/card.webp` | Home grid tile | 800 × 800, transparent |
 | `img/<slug>/NN-*.webp` | Project page gallery | 810 wide (phone), native for desktop |
 
@@ -144,8 +144,10 @@ python -m http.server 8000
 #   http://localhost:8000/tools/art.html?type=card&p=bloomly   -> img/bloomly/card.webp
 ```
 
-Add an entry to `DATA`, re-shoot, done. Covers render at 1600 × 650; cards at
-800 × 800 and **must** be captured with a transparent background.
+Add an entry to `DATA`, re-shoot, done. Covers are laid out at 1600 × 650 CSS
+px and captured at 1.5× (2400 × 975) so the phone UI stays sharp on high-DPI
+screens; cards are 800 × 800 and **must** be captured with a transparent
+background.
 
 `MOCKUP-PROMPTS.md` has design briefs and generation prompts for the four most
 recent apps — useful now mainly as a written spec of each screen.

@@ -41,7 +41,7 @@
 
   .copy {
     position: absolute; left: 84px; top: 0;
-    height: 650px; width: 820px;
+    height: 650px; width: 900px;
     display: flex; flex-direction: column; justify-content: center;
     gap: 22px; z-index: 2;
   }
@@ -60,7 +60,7 @@
   }
   .copy p.sub {
     font-family: 'Newsreader', Georgia, serif;
-    font-size: 27px; line-height: 1.42; color: #56534f; max-width: 690px;
+    font-size: 27px; line-height: 1.42; color: #56534f; max-width: 640px;
   }
   .meta {
     font-family: 'Lato', system-ui, sans-serif;
@@ -74,27 +74,19 @@
   .cover-wrap.dark .meta { color: #a3aebf; }
   .cover-wrap.dark .meta span { border-color: rgba(238,242,248,.3); }
 
+  /* one large hero phone — big enough for the UI to read at page scale */
   .device {
-    position: absolute; right: 96px; top: 78px;
-    width: 246px; height: 552px;
-    border-radius: 30px; overflow: hidden; z-index: 3;
+    position: absolute; right: 74px; top: 30px;
+    width: 430px; height: 966px;
+    border-radius: 48px; overflow: hidden; z-index: 3;
     background: #000;
     box-shadow:
-      0 0 0 7px #1d1c1a,
-      0 0 0 8px rgba(255,255,255,.14),
-      0 34px 60px -18px rgba(28,27,24,.42),
-      0 12px 24px -8px rgba(28,27,24,.28);
+      0 0 0 9px #1d1c1a,
+      0 0 0 10px rgba(255,255,255,.14),
+      0 40px 70px -22px rgba(28,27,24,.42),
+      0 14px 28px -10px rgba(28,27,24,.28);
   }
   .device img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-
-  .device.back {
-    right: 330px; top: 150px;
-    width: 200px; height: 450px;
-    opacity: .96; z-index: 1;
-    box-shadow:
-      0 0 0 6px #1d1c1a,
-      0 24px 44px -16px rgba(28,27,24,.34);
-  }
 
   /* landscape window for games / software instead of a phone */
   .device.window {
@@ -155,98 +147,98 @@ const DATA = [
     kicker: 'Android · Parent + child', title: 'Family<br>Safety',
     sub: 'Live location, screen time and app limits across two phones, paired by QR.',
     meta: ['Kotlin', 'OpenStreetMap', 'In development'],
-    front: 'img/family-safe/01-dashboard.webp', back: 'img/family-safe/05-app-management.webp',
+    front: 'img/family-safe/01-dashboard.webp',
     card: 'img/family-safe/01-dashboard.webp' },
 
   { slug: 'bloomly', accent: '#5f8a4e', ink: '#4a7a3a', dark: false,
     kicker: 'Android · Parenting companion', title: 'Bloomly',
     sub: 'A stage-aware guide for preparing, expecting and newborn — with answers that cite what they used.',
     meta: ['Kotlin', 'Compose', 'In development'],
-    front: 'img/bloomly/01-home.webp', back: 'img/bloomly/02-ask.webp',
+    front: 'img/bloomly/01-home.webp',
     card: 'img/bloomly/01-home.webp' },
 
   { slug: 'itn-vpn', accent: '#47e6a1', ink: '#47e6a1', dark: true,
     kicker: 'Android · VPN client', title: 'ITN VPN',
     sub: 'One tap to a private tunnel. Pick a server, watch the state, see what moved.',
     meta: ['Kotlin', 'VpnService', 'Shipped'],
-    front: 'img/itn-vpn/01-disconnected.webp', back: 'img/itn-vpn/02-connected.webp',
+    front: 'img/itn-vpn/01-disconnected.webp',
     card: 'img/itn-vpn/02-connected.webp' },
 
   { slug: 'meherpur-sheba', accent: '#1f7a4d', ink: '#1f7a4d', dark: false,
     kicker: 'Android · Client work', title: 'Meherpur<br>Sheba',
     sub: 'A district directory for Meherpur — nine sections, 78 doctors, one tap to call.',
     meta: ['Kotlin', 'Firebase', 'Client'],
-    front: 'img/meherpur-sheba/01-home.webp', back: 'img/meherpur-sheba/04-category-list.webp',
+    front: 'img/meherpur-sheba/01-home.webp',
     card: 'img/meherpur-sheba/01-home.webp' },
 
   { slug: 'tuee', accent: '#c2410c', ink: '#b23c0a', dark: false,
     kicker: 'Android · Home cooking', title: 'Tuee',
     sub: 'A private recipe book for two: 41 dishes, a meal plan, and a kitchen assistant.',
     meta: ['Kotlin', 'Android', 'In development'],
-    front: 'img/tuee/01-cuisine.webp', back: 'img/tuee/02-recipes.webp',
+    front: 'img/tuee/01-cuisine.webp',
     card: 'img/tuee/02-recipes.webp' },
 
   { slug: 'ai-imam', accent: '#e0b64a', ink: '#e0b64a', dark: true,
     kicker: 'Android · Islamic assistant', title: 'AI Imam',
     sub: 'Answers about faith drawn from the Qur\'an and authentic Hadith, with sources.',
     meta: ['Kotlin', 'Python', 'LLM API'],
-    front: 'img/ai-imam/01-home.webp', back: null,
+    front: 'img/ai-imam/01-home.webp',
     card: 'img/ai-imam/01-home.webp' },
 
   { slug: 'my-masjid-azan', accent: '#d9a94a', ink: '#d9a94a', dark: true,
     kicker: 'Android · Prayer times', title: 'My Masjid<br>Azan',
     sub: 'Prayer times for any masjid, with a home-screen widget that resizes to any size.',
     meta: ['Kotlin', 'App Widgets', 'In development'],
-    front: 'img/my-masjid-azan/01-home.webp', back: 'img/my-masjid-azan/02-qibla.webp',
+    front: 'img/my-masjid-azan/01-home.webp',
     card: 'img/my-masjid-azan/01-home.webp' },
 
   { slug: 'no-ads-qibla-compass', accent: '#d9a94a', ink: '#d9a94a', dark: true,
     kicker: 'Android · Play Store', title: 'Qibla<br>Compass',
     sub: 'Qibla direction from GPS and sensors. No ads, no account, no network.',
     meta: ['Kotlin', 'Sensors', 'Shipped'],
-    front: 'img/no-ads-qibla-compass/04-live.webp', back: null,
+    front: 'img/no-ads-qibla-compass/04-live.webp',
     card: 'img/no-ads-qibla-compass/04-live.webp' },
 
   { slug: 'pc-controller', accent: '#4f8ff7', ink: '#4f8ff7', dark: true,
     kicker: 'Android · Desktop remote', title: 'PC<br>Controller',
     sub: 'The phone as keyboard, mouse and gamepad for the PC, over local Wi-Fi.',
     meta: ['Kotlin', 'TCP', 'Shipped'],
-    front: 'img/pc-controller/01-home.webp', back: null,
+    front: 'img/pc-controller/01-home.webp',
     card: 'img/pc-controller/01-home.webp' },
 
   { slug: 'neon-breaker', accent: '#b388ff', ink: '#b388ff', dark: true, frame: 'window',
     kicker: 'Browser · One level', title: 'Neon<br>Breaker',
     sub: 'Clear every neon brick. One level, three lives, no install.',
     meta: ['JavaScript', 'Canvas 2D', 'Playable'],
-    front: 'img/neon-breaker/01-gameplay.webp', back: null,
+    front: 'img/neon-breaker/01-gameplay.webp',
     card: 'img/neon-breaker/01-gameplay.webp' },
 
   { slug: 'dx-ball-antigravity', accent: '#ff3d81', ink: '#ff3d81', dark: true, frame: 'window',
     kicker: 'Browser · Arcade', title: 'Neon Dx Ball',
     sub: 'A neon brick breaker where ball speed scales with every brick you break.',
     meta: ['JavaScript', 'Canvas 2D', 'Playable'],
-    front: 'img/dx-ball-antigravity/01-gameplay.webp', back: null,
+    front: 'img/dx-ball-antigravity/01-gameplay.webp',
     card: 'img/dx-ball-antigravity/01-gameplay.webp' },
 
   { slug: 'flappy-bird', accent: '#4aa3b8', ink: '#2f7f92', dark: false, frame: 'window',
     kicker: 'Browser · Clone', title: 'Flappy<br>Bird',
     sub: 'The whole game in a single HTML file. Open it and play.',
     meta: ['HTML', 'Canvas 2D', 'Playable'],
-    front: 'img/flappy-bird/01-gameplay.webp', back: null,
+    front: 'img/flappy-bird/01-gameplay.webp',
     card: 'img/flappy-bird/01-gameplay.webp' },
 
   { slug: 'chorus', accent: '#8b7cf6', ink: '#8b7cf6', dark: true, frame: 'window',
     kicker: 'Desktop · Distributed inference', title: 'Chorus',
     sub: 'Pools RAM and VRAM across machines on a LAN to run one large model.',
     meta: ['Tauri v2', 'Rust', 'Unreleased'],
-    front: 'img/chorus/01-dashboard.webp', back: null,
+    front: 'img/chorus/01-dashboard.webp',
     card: 'img/chorus/01-dashboard.webp' },
 
   { slug: 'wattscope', accent: '#2563eb', ink: '#1d4ed8', dark: false, frame: 'window',
     kicker: 'Desktop · Windows', title: 'WattScope',
     sub: 'Power-supply wattage calculator for PC builds, with live wall-power estimates.',
     meta: ['C#', '.NET', 'WPF'],
-    front: 'img/wattscope/01-dashboard.webp', back: null,
+    front: 'img/wattscope/01-dashboard.webp',
     card: 'img/wattscope/01-dashboard.webp' },
 ];
 
@@ -272,7 +264,7 @@ if (type === 'cover') {
         <p class="sub">${d.sub}</p>
         <div class="meta">${d.meta.map(m => `<span>${m}</span>`).join('')}</div>
       </div>
-      ${d.back ? `<div class="device back"><img src="../${d.back}" alt="" /></div>` : ''}
+      ${''}
       <div class="device${isWindow ? ' window' : ''}"><img src="../${d.front}" alt="" /></div>
     </div>`;
 } else if (isWindow) {
