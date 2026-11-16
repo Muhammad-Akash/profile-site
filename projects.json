@@ -410,6 +410,34 @@
       ],
       "links": { "repo": null, "demo": null }
     },
+    {
+      "slug": "doom-scrolling",
+      "name": "Doom Scrolling",
+      "platform": "Android",
+      "year": "2026",
+      "status": "Finished",
+      "category": "apps",
+      "summary": "Counts your feed swipes, then puts a cap on the day.",
+      "tags": ["Kotlin", "Android", "Offline"],
+      "stack": ["Kotlin", "AccessibilityService", "SharedPreferences"],
+      "cover": "img/doom-scrolling/cover.webp",
+      "gallery": [
+        { "src": "img/doom-scrolling/01-home.webp", "alt": "Home", "caption": "Home — today’s count, the streak and the feed" },
+        { "src": "img/doom-scrolling/02-stats.webp", "alt": "Damage report", "caption": "Stats — the week, the cap breach and the top feeds" },
+        { "src": "img/doom-scrolling/03-settings.webp", "alt": "Settings", "caption": "Settings — access status and the apps that are counted" },
+        { "src": "img/doom-scrolling/04-floating.webp", "alt": "Floating counter", "caption": "Floating counter — the slayer head keeps the number on screen while you scroll" }
+      ],
+      "body": [
+        {
+          "h": "What it does",
+          "p": "One number for today: how many times a page changed in the feeds you switch on. A daily cap, a seven-day chart and a per-app split. No account and no internet permission, so the count cannot leave the phone."
+        },
+        {
+          "h": "Why it's interesting",
+          "p": "Counting is easy; not over-counting is the work. A fling is debounced, the day rolls over at local midnight, and a reboot resumes where it left off. The accessibility service is narrowed to the chosen packages and cannot read screen content at all."
+        }
+      ]
+    },
         {
       "slug": "wattscope",
       "name": "WattScope",
