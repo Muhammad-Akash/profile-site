@@ -130,8 +130,10 @@
       "summary": "Pools RAM and VRAM across machines on a LAN to run one large model.",
       "tags": ["Tauri", "React", "Rust"],
       "stack": ["Tauri v2", "React 19", "Rust", "llama.cpp", "GGUF"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/chorus/cover.webp",
+      "gallery": [
+        { "src": "img/chorus/01-dashboard.webp", "alt": "Dashboard", "caption": "Cluster dashboard — pooled VRAM, shared RAM and connected nodes" }
+      ],
       "body": [
         {
           "h": "What it does",
@@ -434,8 +436,10 @@
       "summary": "Power-supply wattage calculator for PC builds.",
       "tags": ["C#", ".NET", "Desktop"],
       "stack": ["C#", ".NET", "WPF"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/wattscope/cover.webp",
+      "gallery": [
+        { "src": "img/wattscope/01-dashboard.webp", "alt": "Dashboard", "caption": "Dashboard — live wall-power estimate, breakdown and a 60-second chart" }
+      ],
       "body": [
         {
           "h": "What it does",
@@ -500,17 +504,17 @@
     },
     {
       "slug": "dx-ball-antigravity",
-      "name": "DX Ball Antigravity",
+      "name": "Neon Dx Ball",
       "platform": "Game",
       "year": "2025",
       "status": "Playable",
       "category": "games",
-      "summary": "DX Ball variant with dynamic ball-speed scaling.",
+      "summary": "Neon brick breaker with dynamic ball-speed scaling.",
       "tags": ["JavaScript", "Canvas", "Game"],
       "stack": ["JavaScript", "Canvas 2D", "HTML"],
       "cover": "img/dx-ball-antigravity/cover.webp",
       "gallery": [
-        { "src": "img/dx-ball-antigravity/01-gameplay.webp", "alt": "Gameplay", "caption": "DX Ball Antigravity — ball speed scales with every brick" }
+        { "src": "img/dx-ball-antigravity/01-gameplay.webp", "alt": "Gameplay", "caption": "Neon Dx Ball — ball speed scales with every brick" }
       ],
       "body": [
         {

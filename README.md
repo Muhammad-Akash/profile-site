@@ -110,21 +110,21 @@ Screenshots live in `img/<slug>/` and are referenced by relative path.
 |---|---|---|
 | `img/<slug>/cover.webp` | Project page hero | 1600 × 650 |
 | `img/<slug>/card.webp` | Home grid tile | 800 × 800, transparent |
-| `img/<slug>/NN-*.webp` | Project page gallery | 810 × 1818 (phone) |
+| `img/<slug>/NN-*.webp` | Project page gallery | 810 wide (phone), native for desktop |
 
-Images are WebP, not PNG — the 28 files came to 9.3 MB as PNG and 1.6 MB as
-WebP with no visible difference.
+Images are WebP, not PNG — the set was 9.3 MB as PNG and is under 3 MB as WebP
+with no visible difference.
 
-Fourteen of the 21 projects are Android. Nine of those have real screens
-captured from the Pixel 9a — Family Safety, Bloomly, ITN VPN, Meherpur Sheba,
-Tuee, AI Imam, My Masjid Adhan, Qibla Compass and PC Controller. The rest
-still render a generated initials tile; drop a `cover.webp` in `img/<slug>/`
-and add it to that project's `"cover"` field to replace it.
+Fourteen of the 21 projects have real screenshots: nine Android apps captured
+from the Pixel 9a, three browser games captured in headless Chrome, and two
+desktop apps captured on this PC. The rest still render a generated initials
+tile; drop a `cover.webp` in `img/<slug>/` and add it to that project's
+`"cover"` field to replace it.
 
-Three portfolio projects have no imagery because they aren't installable apps:
-Neon Breaker, DX Ball Antigravity and Flappy Bird are single-file HTML games.
-Portable AI Assistant, Calling Bell and Volume Control Pro are not installed
-on the device, so there was nothing to capture.
+Still without imagery: Portable AI Assistant, Calling Bell and Volume Control
+Pro (Android sources present but not installed on the device), LoadShedding
+Alert (needs its server running), and Automated Chatbot and ShortLoop (headless
+services — there is no UI to photograph).
 
 `card.webp` is transparent on purpose: the tile background comes from the
 `--tint` on the card, so it adapts to light and dark automatically.
