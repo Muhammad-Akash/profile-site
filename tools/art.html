@@ -41,7 +41,7 @@
 
   .copy {
     position: absolute; left: 84px; top: 0;
-    height: 650px; width: 900px;
+    height: 650px; width: 840px;
     display: flex; flex-direction: column; justify-content: center;
     gap: 22px; z-index: 2;
   }
@@ -76,9 +76,9 @@
 
   /* one large hero phone — big enough for the UI to read at page scale */
   .device {
-    position: absolute; right: 74px; top: 30px;
-    width: 430px; height: 966px;
-    border-radius: 48px; overflow: hidden; z-index: 3;
+    position: absolute; right: 60px; top: 30px;
+    width: 360px; height: 810px;
+    border-radius: 40px; overflow: hidden; z-index: 3;
     background: #000;
     box-shadow:
       0 0 0 9px #1d1c1a,
@@ -87,6 +87,18 @@
       0 14px 28px -10px rgba(28,27,24,.28);
   }
   .device img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+
+  /* the second screen, tucked behind and to the left */
+  .device.back {
+    right: 372px; top: 138px;
+    width: 258px; height: 580px;
+    border-radius: 30px;
+    opacity: .97; z-index: 1;
+    box-shadow:
+      0 0 0 8px #1d1c1a,
+      0 0 0 9px rgba(255,255,255,.12),
+      0 28px 50px -18px rgba(28,27,24,.4);
+  }
 
   /* landscape window for games / software instead of a phone */
   .device.window {
@@ -100,6 +112,19 @@
       0 30px 56px -18px rgba(28,27,24,.45);
   }
   .device.window img { object-position: center; }
+
+  /* browser-extension popup: a narrow portrait window, not a phone */
+  .device.popup {
+    right: 110px; top: 24px;
+    width: 344px; height: 612px;
+    border-radius: 16px;
+    background: #181818;
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,.14),
+      0 34px 64px -22px rgba(0,0,0,.62),
+      0 12px 26px -12px rgba(0,0,0,.45);
+  }
+  .device.popup img { object-position: top; }
 
   /* ============ CARD ============ */
   .card-wrap {
@@ -129,6 +154,21 @@
   }
   .card-wrap .phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 
+  /* browser-extension popup, centred on the card */
+  .card-wrap .popup {
+    position: absolute;
+    width: 410px; height: 730px;
+    left: 195px; top: 70px;
+    border-radius: 22px; overflow: hidden; z-index: 3;
+    background: #181818;
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,.16),
+      0 0 0 10px rgba(24,24,24,.16),
+      0 34px 58px -18px rgba(28,27,24,.5),
+      0 12px 24px -8px rgba(28,27,24,.3);
+  }
+  .card-wrap .popup img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+
   /* full-bleed screenshot for games / software */
   .card-wrap .shot {
     position: absolute; inset: 0;
@@ -147,35 +187,35 @@ const DATA = [
     kicker: 'Android · Parent + child', title: 'Family<br>Safety',
     sub: 'Live location, screen time and app limits across two phones, paired by QR.',
     meta: ['Kotlin', 'OpenStreetMap', 'In development'],
-    front: 'img/family-safe/01-dashboard.webp',
+    front: 'img/family-safe/01-dashboard.webp', back: 'img/family-safe/05-app-management.webp',
     card: 'img/family-safe/01-dashboard.webp' },
 
   { slug: 'bloomly', accent: '#5f8a4e', ink: '#4a7a3a', dark: false,
     kicker: 'Android · Parenting companion', title: 'Bloomly',
     sub: 'A stage-aware guide for preparing, expecting and newborn — with answers that cite what they used.',
     meta: ['Kotlin', 'Compose', 'In development'],
-    front: 'img/bloomly/01-home.webp',
+    front: 'img/bloomly/01-home.webp', back: 'img/bloomly/02-ask.webp',
     card: 'img/bloomly/01-home.webp' },
 
   { slug: 'itn-vpn', accent: '#47e6a1', ink: '#47e6a1', dark: true,
     kicker: 'Android · VPN client', title: 'ITN VPN',
     sub: 'One tap to a private tunnel. Pick a server, watch the state, see what moved.',
     meta: ['Kotlin', 'VpnService', 'Shipped'],
-    front: 'img/itn-vpn/01-disconnected.webp',
+    front: 'img/itn-vpn/01-disconnected.webp', back: 'img/itn-vpn/02-connected.webp',
     card: 'img/itn-vpn/02-connected.webp' },
 
   { slug: 'meherpur-sheba', accent: '#1f7a4d', ink: '#1f7a4d', dark: false,
     kicker: 'Android · Client work', title: 'Meherpur<br>Sheba',
     sub: 'A district directory for Meherpur — nine sections, 78 doctors, one tap to call.',
     meta: ['Kotlin', 'Firebase', 'Client'],
-    front: 'img/meherpur-sheba/01-home.webp',
+    front: 'img/meherpur-sheba/01-home.webp', back: 'img/meherpur-sheba/04-category-list.webp',
     card: 'img/meherpur-sheba/01-home.webp' },
 
   { slug: 'tuee', accent: '#c2410c', ink: '#b23c0a', dark: false,
     kicker: 'Android · Home cooking', title: 'Tuee',
     sub: 'A private recipe book for two: 41 dishes, a meal plan, and a kitchen assistant.',
     meta: ['Kotlin', 'Android', 'In development'],
-    front: 'img/tuee/01-cuisine.webp',
+    front: 'img/tuee/01-cuisine.webp', back: 'img/tuee/02-recipes.webp',
     card: 'img/tuee/02-recipes.webp' },
 
   { slug: 'ai-imam', accent: '#e0b64a', ink: '#e0b64a', dark: true,
@@ -189,7 +229,7 @@ const DATA = [
     kicker: 'Android · Prayer times', title: 'My Masjid<br>Azan',
     sub: 'Prayer times for any masjid, with a home-screen widget that resizes to any size.',
     meta: ['Kotlin', 'App Widgets', 'In development'],
-    front: 'img/my-masjid-azan/01-home.webp',
+    front: 'img/my-masjid-azan/01-home.webp', back: 'img/my-masjid-azan/02-qibla.webp',
     card: 'img/my-masjid-azan/01-home.webp' },
 
   { slug: 'no-ads-qibla-compass', accent: '#d9a94a', ink: '#d9a94a', dark: true,
@@ -240,6 +280,13 @@ const DATA = [
     meta: ['C#', '.NET', 'WPF'],
     front: 'img/wattscope/01-dashboard.webp',
     card: 'img/wattscope/01-dashboard.webp' },
+
+  { slug: 'youtube-fastforward', accent: '#ff2d55', ink: '#ff2d55', dark: true, frame: 'popup',
+    kicker: 'Extension · YouTube', title: 'YouTube<br>FastForward',
+    sub: 'Skips sponsors, intros and outros on its own, and counts the minutes it saved.',
+    meta: ['Manifest V3', 'JavaScript', 'Shipped'],
+    front: 'img/youtube-fastforward/01-popup.webp',
+    card: 'img/youtube-fastforward/01-popup.webp' },
 ];
 
 const qs = new URLSearchParams(location.search);
@@ -254,6 +301,8 @@ document.documentElement.style.setProperty('--ink', d.ink);
 const root = document.getElementById('root');
 
 const isWindow = d.frame === 'window';
+const isPopup = d.frame === 'popup';
+const frameClass = isWindow ? ' window' : isPopup ? ' popup' : '';
 
 if (type === 'cover') {
   root.innerHTML = `
@@ -264,13 +313,18 @@ if (type === 'cover') {
         <p class="sub">${d.sub}</p>
         <div class="meta">${d.meta.map(m => `<span>${m}</span>`).join('')}</div>
       </div>
-      ${''}
-      <div class="device${isWindow ? ' window' : ''}"><img src="../${d.front}" alt="" /></div>
+      ${d.back ? `<div class="device back"><img src="../${d.back}" alt="" /></div>` : ''}
+      <div class="device${frameClass}"><img src="../${d.front}" alt="" /></div>
     </div>`;
 } else if (isWindow) {
   root.innerHTML = `
     <div class="card-wrap">
       <div class="shot"><img src="../${d.card}" alt="" /></div>
+    </div>`;
+} else if (isPopup) {
+  root.innerHTML = `
+    <div class="card-wrap">
+      <div class="popup"><img src="../${d.card}" alt="" /></div>
     </div>`;
 } else {
   root.innerHTML = `

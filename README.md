@@ -115,11 +115,11 @@ Screenshots live in `img/<slug>/` and are referenced by relative path.
 Images are WebP, not PNG — the set was 9.3 MB as PNG and is under 3 MB as WebP
 with no visible difference.
 
-Fourteen of the 21 projects have real screenshots: nine Android apps captured
-from the Pixel 9a, three browser games captured in headless Chrome, and two
-desktop apps captured on this PC. The rest still render a generated initials
-tile; drop a `cover.webp` in `img/<slug>/` and add it to that project's
-`"cover"` field to replace it.
+Fifteen of the 21 projects have real screenshots: nine Android apps captured
+from the Pixel 9a, three browser games captured in headless Chrome, two desktop
+apps captured on this PC, and one browser-extension popup. The rest still render
+a generated initials tile; drop a `cover.webp` in `img/<slug>/` and add it to
+that project's `"cover"` field to replace it.
 
 Still without imagery: Portable AI Assistant, Calling Bell and Volume Control
 Pro (Android sources present but not installed on the device), LoadShedding

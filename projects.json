@@ -280,11 +280,13 @@
       "year": "2026",
       "status": "Shipped",
       "category": "tools",
-      "summary": "Playback speed plus measurement-driven volume levelling.",
+      "summary": "Sponsor skipping plus playback speed and measurement-driven volume levelling.",
       "tags": ["Chrome", "JavaScript", "Extension"],
       "stack": ["Manifest V3", "JavaScript", "Web Audio", "dBFS AGC"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/youtube-fastforward/cover.webp",
+      "gallery": [
+        { "src": "img/youtube-fastforward/01-popup.webp", "alt": "Popup", "caption": "Popup - auto-skip categories, time saved and segments skipped" }
+      ],
       "body": [
         {
           "h": "What it does",
