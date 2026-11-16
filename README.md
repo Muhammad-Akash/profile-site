@@ -110,7 +110,7 @@ Screenshots live in `img/<slug>/` and are referenced by relative path.
 |---|---|---|
 | `img/<slug>/cover.webp` | Project page hero | 2400 × 975 (1.5× of 1600 × 650) |
 | `img/<slug>/card.webp` | Home grid tile | 800 × 800, transparent |
-| `img/<slug>/NN-*.webp` | Project page gallery | 810 wide (phone), native for desktop |
+| `img/<slug>/NN-*.webp` | Project page gallery | 900 wide (phone), native for desktop |
 
 Images are WebP, not PNG — the set was 9.3 MB as PNG and is under 3 MB as WebP
 with no visible difference.

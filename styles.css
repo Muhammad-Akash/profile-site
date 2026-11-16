@@ -587,6 +587,8 @@ html[data-theme='dark'] .cover-initials { color: rgba(194, 191, 186, .18); }
 
 /* a single screenshot gets more room than one grid column */
 .gallery:has(figure:only-child) figure { grid-column: span 2; }
+/* an explicit wide item spans the whole row */
+.gallery figure.wide { grid-column: 1 / -1; }
 @media (max-width: 560px) {
   .gallery:has(figure:only-child) figure { grid-column: span 1; }
 }

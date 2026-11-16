@@ -146,6 +146,7 @@
         gimg.src = typeof item === 'string' ? item : item.src;
         gimg.alt = (typeof item === 'object' && item.alt) || project.name;
         gimg.loading = 'lazy';
+        if (typeof item === 'object' && item.wide) fig.className = 'wide';
         fig.appendChild(gimg);
         if (typeof item === 'object' && item.caption) {
           fig.appendChild(el('figcaption', null, item.caption));

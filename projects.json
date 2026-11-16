@@ -13,12 +13,11 @@
       "stack": ["Java", "Android", "Node.js relay", "WebRTC", "Firebase", "OpenStreetMap"],
       "cover": "img/family-safe/cover.webp",
       "gallery": [
-        { "src": "img/family-safe/01-dashboard.webp", "alt": "Device dashboard", "caption": "Dashboard — screen time today, remote actions, and the limits below" },
-        { "src": "img/family-safe/02-location.webp", "alt": "Location", "caption": "Location — live trail on hand-drawn OpenStreetMap tiles" },
-        { "src": "img/family-safe/03-screen-time.webp", "alt": "Screen time", "caption": "Screen time — daily report split by app and category" },
-        { "src": "img/family-safe/05-app-management.webp", "alt": "App management", "caption": "App management — per-app limits, blocking and always-allowed" },
-        { "src": "img/family-safe/06-calls-sms.webp", "alt": "Calls and SMS", "caption": "Calls and SMS — every call and message logged from the child phone" },
-        { "src": "img/family-safe/04-family.webp", "alt": "Family", "caption": "Family — the devices bound to one parent" }
+        { "src": "img/family-safe/01-dashboard.webp", "alt": "Dashboard", "caption": "Dashboard — screen time today, remote actions and the limits below" },
+        { "src": "img/family-safe/02-screen-time.webp", "alt": "Screen time", "caption": "Screen time — daily total, split by app, with a weekly switch" },
+        { "src": "img/family-safe/03-app-management.webp", "alt": "App management", "caption": "App management — per-app limits, blocking and always-allowed" },
+        { "src": "img/family-safe/04-calls-sms.webp", "alt": "Calls and SMS", "caption": "Calls and SMS — every call and message logged from the child phone" },
+        { "src": "img/family-safe/05-family.webp", "alt": "Family", "caption": "Family — the devices bound to one parent" }
       ],
       "body": [
         {
@@ -102,11 +101,10 @@
       "stack": ["Kotlin", "Android", "Firebase", "Firestore", "Cloud Functions"],
       "cover": "img/meherpur-sheba/cover.webp",
       "gallery": [
-        { "src": "img/meherpur-sheba/01-home.webp", "alt": "Home", "caption": "Home — notice ticker, helpline, and the nine sections" },
-        { "src": "img/meherpur-sheba/02-home-sections.webp", "alt": "Sections", "caption": "Sections — emergency and safety at a glance" },
-        { "src": "img/meherpur-sheba/03-categories.webp", "alt": "Categories", "caption": "Categories — 50 categories across nine sections" },
-        { "src": "img/meherpur-sheba/04-category-list.webp", "alt": "Category", "caption": "Category — 78 doctors with hours and one-tap call" },
-        { "src": "img/meherpur-sheba/05-detail.webp", "alt": "Detail", "caption": "Detail sheet — hours, number, call, map and share" }
+        { "src": "img/meherpur-sheba/01-home.webp", "alt": "Home", "caption": "Home — notice ticker, helpline and the nine sections" },
+        { "src": "img/meherpur-sheba/02-categories.webp", "alt": "Categories", "caption": "Categories — 50 categories across nine sections" },
+        { "src": "img/meherpur-sheba/03-doctors.webp", "alt": "Doctors", "caption": "Doctors — 78 entries with hours and one-tap call" },
+        { "src": "img/meherpur-sheba/04-doctor.webp", "alt": "Detail sheet", "caption": "Detail sheet — hours, number, call, map and share" }
       ],
       "body": [
         {
@@ -311,10 +309,10 @@
       "stack": ["Kotlin", "Android", "Jetpack"],
       "cover": "img/tuee/cover.webp",
       "gallery": [
-        { "src": "img/tuee/01-cuisine.webp", "alt": "Cuisine", "caption": "Cuisine — meal plan, recipe shelf and shopping list" },
-        { "src": "img/tuee/02-recipes.webp", "alt": "Recipes", "caption": "Recipes — 41 dishes across 10 cuisines" },
-        { "src": "img/tuee/03-dishes.webp", "alt": "Dishes", "caption": "Dishes — every recipe with calories and protein" },
-        { "src": "img/tuee/04-chat.webp", "alt": "Chat", "caption": "Chat — a private thread for two, plus a kitchen assistant" }
+        { "src": "img/tuee/01-recipes.webp", "alt": "Recipes", "caption": "Recipes — 41 dishes across 10 cuisines" },
+        { "src": "img/tuee/02-recipes-list.webp", "alt": "Shortlist", "caption": "The shortlist — what is safe for both of you, with calories" },
+        { "src": "img/tuee/03-chat.webp", "alt": "Chat", "caption": "Chat — a private thread for two, plus a kitchen assistant" },
+        { "src": "img/tuee/04-meal-plan.webp", "alt": "Meal plan", "caption": "Meal plan — the week, the dish catalogue and the shopping list" }
       ],
       "body": [
         {
@@ -364,6 +362,7 @@
       "stack": ["Kotlin", "Android", "Location", "Magnetometer"],
       "cover": "img/no-ads-qibla-compass/cover.webp",
       "gallery": [
+        { "src": "img/no-ads-qibla-compass/00-mockup.webp", "alt": "Hero art", "caption": "Hero art — accurate Qibla finder, 276° from true north", "wide": true },
         { "src": "img/no-ads-qibla-compass/01-compass.webp", "alt": "Compass", "caption": "Compass — live bearing with no ads" },
         { "src": "img/no-ads-qibla-compass/02-direction.webp", "alt": "Direction", "caption": "Direction — bearing, distance to the Kaaba, last update" },
         { "src": "img/no-ads-qibla-compass/03-map.webp", "alt": "Map", "caption": "Map — where you are, against the Kaaba" }
