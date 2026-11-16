@@ -113,6 +113,12 @@
   }
   .device.window img { object-position: center; }
 
+  /* wider window for dashboards that need the full width */
+  .device.window.wide {
+    right: 30px; top: 142px;
+    width: 620px; height: 366px;
+  }
+
   /* browser-extension popup: a narrow portrait window, not a phone */
   .device.popup {
     right: 110px; top: 24px;
@@ -186,21 +192,21 @@ const DATA = [
   { slug: 'family-safe', accent: '#2f6bff', ink: '#2f6bff', dark: false,
     kicker: 'Android · Parent + child', title: 'Family<br>Safety',
     sub: 'Live location, screen time and app limits across two phones, paired by QR.',
-    meta: ['Kotlin', 'OpenStreetMap', 'In development'],
+    meta: ['Kotlin', 'OpenStreetMap', 'Finished'],
     front: 'img/family-safe/01-dashboard.webp', back: 'img/family-safe/03-app-management.webp',
     card: 'img/family-safe/01-dashboard.webp' },
 
   { slug: 'bloomly', accent: '#5f8a4e', ink: '#4a7a3a', dark: false,
     kicker: 'Android · Parenting companion', title: 'Bloomly',
     sub: 'A stage-aware guide for preparing, expecting and newborn — with answers that cite what they used.',
-    meta: ['Kotlin', 'Compose', 'In development'],
+    meta: ['Kotlin', 'Compose', 'Finished'],
     front: 'img/bloomly/01-home.webp', back: 'img/bloomly/02-ask.webp',
     card: 'img/bloomly/01-home.webp' },
 
   { slug: 'itn-vpn', accent: '#47e6a1', ink: '#47e6a1', dark: true,
     kicker: 'Android · VPN client', title: 'ITN VPN',
     sub: 'One tap to a private tunnel. Pick a server, watch the state, see what moved.',
-    meta: ['Kotlin', 'VpnService', 'Shipped'],
+    meta: ['Kotlin', 'VpnService', 'Finished'],
     front: 'img/itn-vpn/01-disconnected.webp', back: 'img/itn-vpn/02-connected.webp',
     card: 'img/itn-vpn/02-connected.webp' },
 
@@ -214,7 +220,7 @@ const DATA = [
   { slug: 'tuee', accent: '#c2410c', ink: '#b23c0a', dark: false,
     kicker: 'Android · Home cooking', title: 'Tuee',
     sub: 'A private recipe book for two: 41 dishes, a meal plan, and a kitchen assistant.',
-    meta: ['Kotlin', 'Android', 'In development'],
+    meta: ['Kotlin', 'Android', 'Finished'],
     front: 'img/tuee/01-recipes.webp', back: 'img/tuee/02-recipes-list.webp',
     card: 'img/tuee/01-recipes.webp' },
 
@@ -228,21 +234,21 @@ const DATA = [
   { slug: 'my-masjid-azan', accent: '#d9a94a', ink: '#d9a94a', dark: true,
     kicker: 'Android · Prayer times', title: 'My Masjid<br>Azan',
     sub: 'Prayer times for any masjid, with a home-screen widget that resizes to any size.',
-    meta: ['Kotlin', 'App Widgets', 'In development'],
+    meta: ['Kotlin', 'App Widgets', 'Finished'],
     front: 'img/my-masjid-azan/01-home.webp', back: 'img/my-masjid-azan/02-qibla.webp',
     card: 'img/my-masjid-azan/01-home.webp' },
 
   { slug: 'no-ads-qibla-compass', accent: '#d9a94a', ink: '#d9a94a', dark: true,
     kicker: 'Android · Play Store', title: 'Qibla<br>Compass',
     sub: 'Qibla direction from GPS and sensors. No ads, no account, no network.',
-    meta: ['Kotlin', 'Sensors', 'Shipped'],
+    meta: ['Kotlin', 'Sensors', 'Finished'],
     front: 'img/no-ads-qibla-compass/04-live.webp',
     card: 'img/no-ads-qibla-compass/04-live.webp' },
 
   { slug: 'pc-controller', accent: '#4f8ff7', ink: '#4f8ff7', dark: true,
     kicker: 'Android · Desktop remote', title: 'PC<br>Controller',
     sub: 'The phone as keyboard, mouse and gamepad for the PC, over local Wi-Fi.',
-    meta: ['Kotlin', 'TCP', 'Shipped'],
+    meta: ['Kotlin', 'TCP', 'Finished'],
     front: 'img/pc-controller/01-home.webp',
     card: 'img/pc-controller/01-home.webp' },
 
@@ -270,7 +276,7 @@ const DATA = [
   { slug: 'chorus', accent: '#8b7cf6', ink: '#8b7cf6', dark: true, frame: 'window',
     kicker: 'Desktop · Distributed inference', title: 'Chorus',
     sub: 'Pools RAM and VRAM across machines on a LAN to run one large model.',
-    meta: ['Tauri v2', 'Rust', 'Unreleased'],
+    meta: ['Tauri v2', 'Rust', 'Finished'],
     front: 'img/chorus/01-dashboard.webp',
     card: 'img/chorus/01-dashboard.webp' },
 
@@ -284,9 +290,36 @@ const DATA = [
   { slug: 'youtube-fastforward', accent: '#ff2d55', ink: '#ff2d55', dark: true, frame: 'popup',
     kicker: 'Extension · YouTube', title: 'YouTube<br>FastForward',
     sub: 'Skips sponsors, intros and outros on its own, and counts the minutes it saved.',
-    meta: ['Manifest V3', 'JavaScript', 'Shipped'],
+    meta: ['Manifest V3', 'JavaScript', 'Finished'],
     front: 'img/youtube-fastforward/01-popup.webp',
     card: 'img/youtube-fastforward/01-popup.webp' },
+
+  { slug: 'calling-bell-app', accent: '#6c5ce7', ink: '#5b4bd6', dark: false,
+    kicker: 'Android · Local network', title: 'Calling<br>Bell',
+    sub: 'Two phones on one Wi-Fi: one sits by the door, the other rings.',
+    meta: ['Kotlin', 'LAN', 'Finished'],
+    front: 'img/calling-bell-app/01-door-bell.webp', back: 'img/calling-bell-app/02-receiver.webp',
+    card: 'img/calling-bell-app/01-door-bell.webp' },
+  { slug: 'portable-ai-assistant', accent: '#e0705c', ink: '#e0705c', dark: true,
+    kicker: 'Android · Pocket assistant', title: 'Portable<br>AI Assistant',
+    sub: 'A pocket assistant wired to a hosted LLM, with push-to-talk and a live API status line.',
+    meta: ['Kotlin', 'LLM API', 'Finished'],
+    front: 'img/portable-ai-assistant/01-assistant.webp',
+    card: 'img/portable-ai-assistant/01-assistant.webp' },
+
+  { slug: 'volume-control-pro', accent: '#4c8f5f', ink: '#4c8f5f', dark: true,
+    kicker: 'Android · Audio control', title: 'Volume<br>Control Pro',
+    sub: 'Per-app volume, a system bus and automation profiles the stock panel never had.',
+    meta: ['Kotlin', 'Audio', 'Finished'],
+    front: 'img/volume-control-pro/01-mixer.webp',
+    card: 'img/volume-control-pro/01-mixer.webp' },
+
+  { slug: 'loadshedding-alert', accent: '#f5a623', ink: '#f5a623', dark: true, frame: 'window', wide: true,
+    kicker: 'Web · Power cuts', title: 'LoadShedding<br>Alert',
+    sub: 'Warns you before the power goes, not after: schedules, pre-alerts and live grid status.',
+    meta: ['FastAPI', 'Python', 'Finished'],
+    front: 'img/loadshedding-alert/01-dashboard.webp',
+    card: 'img/loadshedding-alert/01-dashboard.webp' },
 ];
 
 const qs = new URLSearchParams(location.search);
@@ -302,7 +335,7 @@ const root = document.getElementById('root');
 
 const isWindow = d.frame === 'window';
 const isPopup = d.frame === 'popup';
-const frameClass = isWindow ? ' window' : isPopup ? ' popup' : '';
+const frameClass = isWindow ? (' window' + (d.wide ? ' wide' : '')) : isPopup ? ' popup' : '';
 
 if (type === 'cover') {
   root.innerHTML = `

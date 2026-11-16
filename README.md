@@ -115,16 +115,18 @@ Screenshots live in `img/<slug>/` and are referenced by relative path.
 Images are WebP, not PNG — the set was 9.3 MB as PNG and is under 3 MB as WebP
 with no visible difference.
 
-Fifteen of the 21 projects have real screenshots: nine Android apps captured
-from the Pixel 9a, three browser games captured in headless Chrome, two desktop
-apps captured on this PC, and one browser-extension popup. The rest still render
-a generated initials tile; drop a `cover.webp` in `img/<slug>/` and add it to
-that project's `"cover"` field to replace it.
+Nineteen of the 21 projects have real screenshots: eleven Android apps (nine
+captured from the Pixel 9a, the rest built and captured locally), three browser
+games captured in headless Chrome, four desktop or web apps captured on this PC,
+and one browser-extension popup. The rest still render a generated initials
+tile; drop a `cover.webp` in `img/<slug>/` and add it to that project's
+`"cover"` field to replace it.
 
-Still without imagery: Portable AI Assistant, Calling Bell and Volume Control
-Pro (Android sources present but not installed on the device), LoadShedding
-Alert (needs its server running), and Automated Chatbot and ShortLoop (headless
-services — there is no UI to photograph).
+Still without imagery: Automated Chatbot and ShortLoop — both headless services
+with no UI to photograph.
+
+Statuses: every finished project reads `Finished`, the three games read
+`Playable`, and Automated Chatbot reads `Running` because the service is live.
 
 `card.webp` is transparent on purpose: the tile background comes from the
 `--tint` on the card, so it adapts to light and dark automatically.
