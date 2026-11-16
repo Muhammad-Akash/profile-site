@@ -115,15 +115,15 @@ Screenshots live in `img/<slug>/` and are referenced by relative path.
 Images are WebP, not PNG — the set was 9.3 MB as PNG and is under 3 MB as WebP
 with no visible difference.
 
-Nineteen of the 21 projects have real screenshots: eleven Android apps (nine
+Nineteen of the 20 projects have real screenshots: eleven Android apps (nine
 captured from the Pixel 9a, the rest built and captured locally), three browser
 games captured in headless Chrome, four desktop or web apps captured on this PC,
 and one browser-extension popup. The rest still render a generated initials
 tile; drop a `cover.webp` in `img/<slug>/` and add it to that project's
 `"cover"` field to replace it.
 
-Still without imagery: Automated Chatbot and ShortLoop — both headless services
-with no UI to photograph.
+Still without imagery: Automated Chatbot — a headless service with no UI to
+photograph.
 
 Statuses: every finished project reads `Finished`, the three games read
 `Playable`, and Automated Chatbot reads `Running` because the service is live.

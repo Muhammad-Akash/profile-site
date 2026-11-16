@@ -410,31 +410,7 @@
       ],
       "links": { "repo": null, "demo": null }
     },
-    {
-      "slug": "shortloop",
-      "name": "ShortLoop",
-      "platform": "Tools",
-      "year": "2026",
-      "status": "Finished",
-      "category": "tools",
-      "summary": "Pipeline for producing short-form video, end to end.",
-      "tags": ["Python", "Automation", "API"],
-      "stack": ["Python", "FFmpeg", "API"],
-      "cover": "",
-      "gallery": [],
-      "body": [
         {
-          "h": "What it does",
-          "p": "Takes an idea or a source clip and carries it through to a finished short — script, cut, captions, upload — with as little manual handling as possible."
-        },
-        {
-          "h": "Why it's interesting",
-          "p": "Automation that runs unattended has to survive interruptions and resume cleanly. Most of the design is state and recovery, not the creative step."
-        }
-      ],
-      "links": { "repo": null, "demo": null }
-    },
-    {
       "slug": "wattscope",
       "name": "WattScope",
       "platform": "Desktop",
