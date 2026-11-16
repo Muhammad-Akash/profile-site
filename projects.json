@@ -256,21 +256,36 @@
       "year": "2025",
       "status": "Finished",
       "category": "softwares",
-      "summary": "Drive a desktop from a phone — Python server, Android client.",
-      "tags": ["Python", "Android", "LAN"],
-      "stack": ["Python", "CustomTkinter", "Android", "WebSocket"],
+      "summary": "Phone as keyboard, mouse and second monitor for the PC.",
+      "tags": ["Python", "Android", "Streaming"],
+      "stack": ["Python", "CustomTkinter", "Android", "WebSocket", "MJPEG"],
       "cover": "img/pc-controller/cover.webp",
       "gallery": [
-        { "src": "img/pc-controller/01-home.webp", "alt": "Connect", "caption": "Connect — enter the PC address, or scan a QR code" }
+        {
+          "src": "img/pc-controller/01-home.webp",
+          "alt": "Connect",
+          "caption": "Connect — enter the PC address, or scan a QR code"
+        },
+        {
+          "src": "img/pc-controller/02-remote.webp",
+          "alt": "Remote",
+          "caption": "Remote — the PC screen live on the phone, trackpad and keys underneath"
+        },
+        {
+          "src": "img/pc-controller/03-monitor.webp",
+          "alt": "Second screen",
+          "caption": "Full screen — the desktop fills the phone in landscape, control bar still in reach",
+          "wide": true
+        }
       ],
       "body": [
         {
           "h": "What it does",
-          "p": "A small server on the PC and an app on the phone: volume, media, shutdown, and the everyday controls you'd otherwise walk across the room for. Both packaged as standalone builds — an .exe and an .apk."
+          "p": "A small server on the PC and an app on the phone. The PC screen streams to the phone as MJPEG, so the phone doubles as a second monitor, and the phone sends back mouse, keys, clipboard and power commands. Both packaged as standalone builds — an .exe and an .apk."
         },
         {
           "h": "Why it's interesting",
-          "p": "Pairing has to work without configuration on a network you don't control. Discovery, reconnect, and a UI that stays usable when the link drops were most of the work."
+          "p": "Video and input ride separate sockets, so a saturated link makes the picture choppy while clicks and typing stay responsive. The mirrored screen is a trackpad, not a touchscreen: dragging moves the pointer relatively and a tap clicks, so you can move somewhere and look before committing. Discovery, reconnect and a UI that stays usable when the link drops were most of the work."
         }
       ],
       "links": { "repo": null, "demo": null }
