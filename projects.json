@@ -482,8 +482,10 @@
       "summary": "Offline brick breaker — one level, three lives, no install.",
       "tags": ["JavaScript", "Canvas", "Game"],
       "stack": ["JavaScript", "Canvas 2D", "HTML"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/neon-breaker/cover.webp",
+      "gallery": [
+        { "src": "img/neon-breaker/01-gameplay.webp", "alt": "Gameplay", "caption": "Neon Breaker — the brick field and its one-level challenge" }
+      ],
       "body": [
         {
           "h": "What it does",
@@ -506,8 +508,10 @@
       "summary": "DX Ball variant with dynamic ball-speed scaling.",
       "tags": ["JavaScript", "Canvas", "Game"],
       "stack": ["JavaScript", "Canvas 2D", "HTML"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/dx-ball-antigravity/cover.webp",
+      "gallery": [
+        { "src": "img/dx-ball-antigravity/01-gameplay.webp", "alt": "Gameplay", "caption": "DX Ball Antigravity — ball speed scales with every brick" }
+      ],
       "body": [
         {
           "h": "What it does",
@@ -530,8 +534,10 @@
       "summary": "Clone in a single HTML file, open and play.",
       "tags": ["HTML", "Canvas", "Game"],
       "stack": ["HTML", "Canvas 2D", "JavaScript"],
-      "cover": "",
-      "gallery": [],
+      "cover": "img/flappy-bird/cover.webp",
+      "gallery": [
+        { "src": "img/flappy-bird/01-gameplay.webp", "alt": "Gameplay", "caption": "Flappy Bird — the whole game in one HTML file" }
+      ],
       "body": [
         {
           "h": "What it does",

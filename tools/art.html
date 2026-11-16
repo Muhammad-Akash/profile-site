@@ -96,6 +96,19 @@
       0 24px 44px -16px rgba(28,27,24,.34);
   }
 
+  /* landscape window for games / software instead of a phone */
+  .device.window {
+    right: 92px; top: 128px;
+    width: 566px; height: 392px;
+    border-radius: 12px;
+    background: #0d1420;
+    box-shadow:
+      0 0 0 1px rgba(28,27,24,.5),
+      0 0 0 8px #1d1c1a,
+      0 30px 56px -18px rgba(28,27,24,.45);
+  }
+  .device.window img { object-position: center; }
+
   /* ============ CARD ============ */
   .card-wrap {
     position: relative;
@@ -123,6 +136,14 @@
       0 12px 24px -8px rgba(28,27,24,.26);
   }
   .card-wrap .phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+
+  /* full-bleed screenshot for games / software */
+  .card-wrap .shot {
+    position: absolute; inset: 0;
+    z-index: 3;
+    overflow: hidden;
+  }
+  .card-wrap .shot img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 </style>
 </head>
 <body>
@@ -192,6 +213,27 @@ const DATA = [
     meta: ['Kotlin', 'TCP', 'Shipped'],
     front: 'img/pc-controller/01-home.webp', back: null,
     card: 'img/pc-controller/01-home.webp' },
+
+  { slug: 'neon-breaker', accent: '#b388ff', ink: '#b388ff', dark: true, frame: 'window',
+    kicker: 'Browser · One level', title: 'Neon<br>Breaker',
+    sub: 'Clear every neon brick. One level, three lives, no install.',
+    meta: ['JavaScript', 'Canvas 2D', 'Playable'],
+    front: 'img/neon-breaker/01-gameplay.webp', back: null,
+    card: 'img/neon-breaker/01-gameplay.webp' },
+
+  { slug: 'dx-ball-antigravity', accent: '#ff3d81', ink: '#ff3d81', dark: true, frame: 'window',
+    kicker: 'Browser · Arcade', title: 'DX Ball<br>Antigravity',
+    sub: 'A DX Ball variant where ball speed scales with every brick you break.',
+    meta: ['JavaScript', 'Canvas 2D', 'Playable'],
+    front: 'img/dx-ball-antigravity/01-gameplay.webp', back: null,
+    card: 'img/dx-ball-antigravity/01-gameplay.webp' },
+
+  { slug: 'flappy-bird', accent: '#4aa3b8', ink: '#2f7f92', dark: false, frame: 'window',
+    kicker: 'Browser · Clone', title: 'Flappy<br>Bird',
+    sub: 'The whole game in a single HTML file. Open it and play.',
+    meta: ['HTML', 'Canvas 2D', 'Playable'],
+    front: 'img/flappy-bird/01-gameplay.webp', back: null,
+    card: 'img/flappy-bird/01-gameplay.webp' },
 ];
 
 const qs = new URLSearchParams(location.search);
@@ -205,6 +247,8 @@ document.documentElement.style.setProperty('--ink', d.ink);
 
 const root = document.getElementById('root');
 
+const isWindow = d.frame === 'window';
+
 if (type === 'cover') {
   root.innerHTML = `
     <div class="cover-wrap${d.dark ? ' dark' : ''}">
@@ -215,7 +259,12 @@ if (type === 'cover') {
         <div class="meta">${d.meta.map(m => `<span>${m}</span>`).join('')}</div>
       </div>
       ${d.back ? `<div class="device back"><img src="../${d.back}" alt="" /></div>` : ''}
-      <div class="device"><img src="../${d.front}" alt="" /></div>
+      <div class="device${isWindow ? ' window' : ''}"><img src="../${d.front}" alt="" /></div>
+    </div>`;
+} else if (isWindow) {
+  root.innerHTML = `
+    <div class="card-wrap">
+      <div class="shot"><img src="../${d.card}" alt="" /></div>
     </div>`;
 } else {
   root.innerHTML = `
